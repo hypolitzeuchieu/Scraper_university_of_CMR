@@ -1,208 +1,289 @@
 import sys
-import time
-from urllib.parse import urljoin
 
-from bs4 import BeautifulSoup
-import requests
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support import expected_conditions as ec
+
 from loguru import logger
+from selenium.webdriver.support.wait import WebDriverWait
+from selenium.webdriver.common.action_chains import ActionChains
+
 
 logger.remove()
 logger.add('univers_school.log', rotation='700kb', level='WARNING')
 logger.add(sys.stderr, level='INFO')
-url_cache = {}
 
 
-def get_url_content(url: str):
-    if url in url_cache:
-        return url_cache[url]
-    else:
-        headers = {
-            "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36"
-                          " (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"}
+class Univers:
+    def __init__(self):
+        chrome_options = Options()
+        chrome_options.add_argument("--no-sandbox")
+        chrome_options.add_experimental_option("detach", True)
+        chrome_options.add_argument("--start-maximized")
+        self.driver = webdriver.Chrome(options=chrome_options)
+        self.wait = WebDriverWait(self.driver, 3)
 
-        with requests.Session() as session:
-            try:
-                response = session.get(url, headers=headers)
-                if response.status_code == 200:
-                    soup = BeautifulSoup(response.text, 'html.parser')
-                    if soup:
-                        url_cache[url] = soup
-                        return soup
-                    else:
-                        logger.error('Error to fetch page content')
-            except requests.exceptions.RequestException as e:
-                logger.error(f'Access error to {url}: {e}')
-
-
-def link_wiki_university(soup) -> list:
-    div_univ = soup.find('div', attrs={'class': "mw-content-ltr mw-parser-output"})
-    ele_univ = div_univ.select_one("ul").select('li')
-    university_link = []
-    base_url = "https://fr.wikipedia.org"
-    wiki_link = []
-    for element in ele_univ:
-        for a in element.find_all('a', title=True):
-            link = a['href']
-            absolute_link = urljoin(base_url, link)
-            wiki_link.append(absolute_link)
-            university_link.append(absolute_link)
-            time.sleep(3)
-    return wiki_link
-
-
-def get_list_university_website(links: list) -> list:
-    list_website = []
-    for link in links:
-        response = get_url_content(link)
-        title = response.find('h1')
-        web_site = response.find('div', attrs={'class': "mw-content-ltr mw-parser-output"})
+    def get_yaounde1(self):
+        url = "https://www.uy1.uninet.cm/"
         try:
-            link_website = web_site.find_all('table')[1]
-            last_row = link_website.find_all('tr')[-1]
-            link_university = last_row.find('a')
-            list_website.append(link_university['href'])
-            time.sleep(3)
-        except AttributeError as e:
-            logger.error(f"error to fetch the website link of '{title.text}': {e}")
-            continue
-    return list_website
+            self.driver.get(url)
+            name = self.wait.until(
+                ec.presence_of_element_located((By.XPATH, '//*[@id="masthead"]/div[2]/div/div/div[1]/div/a/img')))
 
+            name_text = name.get_attribute('alt')
+            self.wait.until(ec.element_to_be_clickable((By.XPATH, '//*[@id="menu-item-11283"]/a'))).click()
+            f_path = '//*[@id="content"]/div/div/div[1]/div/div/div/div/div/div[2]/div/div[1]/ul'
+            faculty_element = self.wait.until(ec.presence_of_element_located((By.XPATH, f_path)))
+            faculty_tag = faculty_element.find_elements(By.TAG_NAME, 'li')
+            faculty_list = []
+            faculty_link = []
+            for i in faculty_tag:
+                link = i.find_element(By.TAG_NAME, 'a').get_attribute('href')
+                faculty_link.append(link)
+                faculty_list.append(i.text)
+            faculty_name_link = list(zip(faculty_list, faculty_link))
+            logger.info(f"l'{name_text} compte {len(faculty_list)} "
+                        f"facultes et formations la list: {faculty_name_link} et son lien est:{url}")
+        except Exception as e:
+            logger.error(f'Access error to {url}: {e}')
 
-def urls_list() -> list:
-    base_url = "https://fr.wikipedia.org/wiki/Enseignement_sup%C3%A9rieur_et_recherche_au_Cameroun"
-    content = get_url_content(base_url)
-    time.sleep(2)
-    list_url = link_wiki_university(content)
-    time.sleep(2)
-    all_link = get_list_university_website(list_url)
-    return all_link
-
-
-def ubuea(url: str):
-    if url in urls_list():
-        response = get_url_content(url)
-        name = response.find('h1').text
-        website = url
-
-
-def udouala(url: str):
-    if url in urls_list():
-        response = get_url_content(url)
-        name = response.find('h1').text
-        website = url
-
-
-def udschang(url: str):
-    if url in urls_list():
-        response = get_url_content(url)
-        website = url
-        name = response.select_one('header').select_one('img')
-        name = name['alt']
-        aside = response.find('div', attrs={'class': "menu-les-etablissemens-container"})
-        school = aside.find_all('li')
-        school_name = []
-        for i in school:
-            element = i.text
-            school_name.append(element)
-        print(name, school_name, website)
-    else:
-        logger.error(f"{url} doesn't match to university")
-
-
-def ungaoundere(url: str):
-    if url in urls_list():
-        response = get_url_content(url)
-        name = response.find('h1').text
-        website = url
-
-
-def uyaounde1(url: str):
-    if url in urls_list():
-        response = get_url_content(url)
-        website = url
+    def get_ubuea(self):
+        url = "http://ubuea.cm/"
         try:
-            header = response.find('header', attrs={'id': "masthead"})
-            name = header.find('h1', attrs={'class': "site-title"}).find('a').text
+            self.driver.get(url)
+            b_path = '//*[@id="content"]/div/div[2]/h1/span/strong'
+            name = self.wait.until(ec.presence_of_element_located((By.XPATH, b_path))).text
+            self.wait.until(ec.presence_of_element_located((By.XPATH, '//*[@id="menu-item-4399"]/a'))).click()
+            f_div = self.wait.until(ec.presence_of_element_located((By.XPATH, '//*[@id="post-2515"]/div[2]')))
+            f_tag = f_div.find_elements(By.XPATH, "//div[@class='entry-content']//h2")
+
+            f_list = []
+            f_link = []
+            for i in f_tag:
+                f_list.append(i.text)
+                f_link.append(i.find_element(By.TAG_NAME, 'a').get_attribute('href'))
+            f_name_link = list(zip(f_list, f_link))
+            logger.info(f"Welcome to {name} it has {len(f_name_link)} "
+                        f"faculties and schools, the list: {f_name_link}, and its website is: {url}")
+        except Exception as e:
+            logger.error(f'Access error to {url}: {e}')
+
+    def get_udouala(self):
+        url = 'http://www.univ-douala.cm/'
+        try:
+            self.driver.get(url)
+            name = self.driver.title
             print(name)
+            # get the faculty list
+            f_path = '//*[@id="footer-part"]/div/div/div/div[3]/div/ul'
+            ul_tag = self.wait.until(ec.presence_of_element_located((By.XPATH, f_path)))
+            f_div = ul_tag.find_elements(By.XPATH, './li/a')
+            fac_list = []
+            fac_link = []
+            for element in f_div:
+                fac_list.append(element.text)
+                fac_link.append(element.get_attribute("href"))
+            fac_name_link = list(zip(fac_list, fac_link))
+            p_path = '//*[@id="footer-part"]/div/div/div/div[4]/div/ul'
+            ul_tag = self.wait.until(ec.presence_of_element_located((By.XPATH, p_path)))
+            f_div = ul_tag.find_elements(By.XPATH, './li/a')
+            trai_list = []
+            trai_link = []
+            for element in f_div:
+                trai_list.append(element.text)
+                trai_link.append(element.get_attribute("href"))
+            trai_name_link = list(zip(trai_list, trai_link))
+            fac_name_link.extend(trai_name_link)
+            logger.info(f"L'{name} compte {len(fac_name_link)} "
+                        f"facultes et formations. La list: {fac_name_link} et son lien est: {url}")
+        except Exception as e:
+            logger.error(f'Access error to {url}: {e}')
 
-            div_element = header.find('div', attrs={"class": "primary-nav nav"})
-            time.sleep(3)
-            ul_element = div_element.find('ul', attrs={"id": "menu-primary-menu"})
-            faculty_school = ul_element.find('li', attrs={'id': "menu-item-11283"})
-            link = faculty_school.find('a')['href']
-            time.sleep(3)
-            print(link)
-            if link:
-                list_fac = faculty_yaounde1(url)
-                print(list_fac)
-        except AttributeError as e:
-            logger.error(f'Error to get header: {e}')
-
-    else:
-        logger.info(f"{url} doesn't match")
-
-
-def faculty_yaounde1(url: str) -> list:
-    resp = get_url_content(url)
-    with open('index.html', 'w') as f:
-        data = f.write(resp.text)
-    try:
-        div_faculty = resp.find('div', attrs={'class': "vc_tta-tabs-container"})
-        ul_faculty = div_faculty.find('ul', attrs={"class": "vc_tta-tabs-list"})
-        li_element = ul_faculty.select('li')
-        faculty_list = []
-        for i in li_element:
-            faculty_list.append(i.text)
-
-        print(faculty_list)
-        return faculty_list
-    except AttributeError as e:
-        logger.error(f'Error to get faculty from {url}: {e}')
-        return []
-
-
-def uyaounde2(url: str):
-    if url in urls_list():
-        response = get_url_content(url)
-        name_tag = response.find('a').find('img')
-        name = name_tag['alt']
-        website = url
-        school_div = response.find('div', attrs={"class": "av-magazine-group sort_all"})
-        article_tag = school_div.find_all('article')
-        list_faculty = []
-        for i in article_tag:
-            faculty = i.find('h3')
-            list_faculty.append(faculty.text)
-        print(name, website, list_faculty)
-
-
-def ubertoua(url: str):
-    if url in urls_list():
-        response = get_url_content(url)
-        name = response.find('div', attrs={'class', 'copyright'}).find('strong').text.strip()
-        website = url
+    def get_udschang(self):
+        url = 'http://www.univ-dschang.org'
         try:
-            training_link = response.find('div', attrs={"class": "container d-flex justify-content-center align-items-center"})
-            training = training_link.find_all('li')[2]
-            link = training.find('a')
-            link_f = urljoin(url, link['href'])
-            if link_f:
-                resp = get_url_content(link_f)
-                try:
-                    faculty_div = resp.find('div', attrs={'class': "col-lg-3 depart"}).find('ul', attrs={'class': "nav nav-tabs flex-column"}).find_all('li')
-                    faculty_list = []
-                    for i in faculty_div:
-                        element = i.find('a')
-                        faculty_list.append(element.text.strip())
-                    print(name, faculty_list, website)
-                except AttributeError as e:
-                    logger.error(f'Error to get faculty: {e}')
+            self.driver.get(url)
+            t_path = '//*[@id="main-header"]/div/div/div[1]/a/img'
+            name_el = self.wait.until(ec.presence_of_element_located((By.XPATH, t_path)))
+            name = name_el.get_attribute('alt')
 
-            else:
-                logger.info('training url not found')
-        except AttributeError as e:
-            logger.error(f'Error to get faculty of "{name}" : {e}')
+            f_path = '//*[@id="menu-les-etablissemens"]'
+            ul_tag = self.wait.until(ec.presence_of_element_located((By.XPATH, f_path)))
+            f_div = ul_tag.find_elements(By.XPATH, './li/a')
+            fac_list = []
+            fac_link = []
+            for element in f_div:
+                fac_list.append(element.text)
+                fac_link.append(element.get_attribute("href"))
+
+            fac_name_link = list(zip(fac_list, fac_link))
+            logger.info(f"L'{name} compte {len(fac_name_link)} "
+                        f"facultes et formations. La list: {fac_name_link} et son lien est: {url}")
+
+        except Exception as e:
+            logger.error(f'Access error to {url}: {e}')
+
+    def get_ugaoundere(self):
+        url = 'http://www.univ-ndere.cm/'
+        try:
+            self.driver.get(url)
+            n_path = '//*[@id="td-outer-wrap"]/div[1]/div/div[2]/div/div/div[1]/h1/a/span'
+            name = self.wait.until(ec.presence_of_element_located((By.XPATH, n_path))).text
+            self.wait.until(ec.element_to_be_clickable((By.XPATH, '//*[@id="text-2"]/div/p[3]/a[4]'))).click()
+
+            print(name)
+        except Exception as e:
+            logger.error(f'Access error to {url}: {e}')
+
+    def get_yaounde2(self):
+        url = 'http://www.univ-yaounde2.org/'
+        try:
+            self.driver.get(url)
+            t_path = '//*[@id="header_main"]/div/div/span/a/img'
+            name_el = self.wait.until(ec.presence_of_element_located((By.XPATH, t_path)))
+            name = name_el.get_attribute('alt')
+            fac_div = self.wait.until(ec.presence_of_element_located((By.XPATH, '//*[@id="1"]/div[2]')))
+            articles = fac_div.find_elements(By.TAG_NAME, 'article')
+            fac_list = []
+            fac_link = []
+            for article in articles:
+                element = article.find_element(By.TAG_NAME, 'h3').find_element(By.TAG_NAME, 'a')
+                f_element = element.text
+                fac_list.append(f_element)
+                f_link = element.get_attribute('href')
+                fac_link.append(f_link)
+
+            fac_name_link = list(zip(fac_list, fac_link))
+            logger.info(f"L'{name} compte {len(fac_name_link)} "
+                        f"facultes et formations. La list: {fac_name_link} et son lien est: {url}")
+
+        except Exception as e:
+            logger.error(f'Access error to {url}: {e}')
+
+    def get_ubamenda(self):
+        url = 'https://uniba.cm/'
+        try:
+            self.driver.get(url)
+            name = self.driver.title
+            action_tag = self.wait.until(ec.presence_of_element_located((By.XPATH, '//*[@id="m_menu_active"]/li[3]')))
+            ActionChains(self.driver).move_to_element(action_tag).perform()
+            self.driver.implicitly_wait(3)
+
+            sch_path = '//*[@id="m_menu_active"]/li[3]/ul'
+            sch_div = self.wait.until(ec.presence_of_element_located((By.XPATH, sch_path)))
+            li_tag = sch_div.find_elements(By.TAG_NAME, 'li')
+            fac_list = []
+            fac_link = []
+            for element in li_tag:
+                f_element = element.find_element(By.TAG_NAME, 'a')
+                fac_list.append(f_element.text)
+                fac_link.append(f_element.get_attribute('href'))
+            fac_name_link = list(zip(fac_list, fac_link))
+
+            logger.info(f"{name} count {len(fac_name_link)} "
+                        f"faculties and trainings. The list: {fac_name_link} and its website: {url}")
+
+        except Exception as e:
+            logger.error(f'Access error to {url}: {e}')
+
+    def get_ubertoua(self):
+        url = 'https://www.univ-bertoua.cm'
+        try:
+            self.driver.get(url)
+            self.wait.until(ec.element_to_be_clickable((By.XPATH, '//*[@id="navbar"]/ul/li[3]'))).click()
+            name = self.driver.title
+            try:
+                f_path = '//*[@id="departments"]/div/div/div[1]/ul'
+                f_tag = self.wait.until(ec.presence_of_element_located((By.XPATH, f_path)))
+                li_tag = f_tag.find_elements(By.TAG_NAME, 'li')
+                fac_list = []
+                fac_link = []
+                for element in li_tag:
+                    f_element = element.find_element(By.TAG_NAME, 'a')
+                    fac_list.append(f_element.text)
+                    fac_link.append(f_element.get_attribute('href'))
+
+                fac_name_link = list(zip(fac_list, fac_link))
+                logger.info(f"L'{name} compte {len(fac_name_link)} "
+                            f"facultes et formations. La list: {fac_name_link} et son lien est: {url}")
+
+            except AttributeError as e:
+                logger.error(f'error to fetch formation button: {e}')
+
+        except Exception as e:
+            logger.error(f'Access error to {url}: {e}')
+
+    def get_ugaroua(self):
+        url = 'http://univ-garoua.cm'
+        try:
+            self.driver.get(url)
+            name = self.driver.title
+            print(name)
+            school_path = '//*[@id="main-wrapper"]/header/div[3]/div/div/div[2]/nav/ul/li[4]/a'
+            school_tag = self.wait.until(ec.presence_of_element_located((By.XPATH, school_path)))
+            ActionChains(self.driver).move_to_element(school_tag).perform()
+            self.driver.implicitly_wait(3)
+
+            # get the name of schools
+            sch_path = '//*[@id="main-wrapper"]/header/div[3]/div/div/div[2]/nav/ul/li[4]/ul/li[1]/ul'
+            sch_div = self.wait.until(ec.presence_of_element_located((By.XPATH, sch_path)))
+            li_tag = sch_div.find_elements(By.TAG_NAME, 'li')
+            fac_list = []
+            fac_link = []
+            for element in li_tag:
+                f_element = element.find_element(By.TAG_NAME, 'a')
+                fac_list.append(f_element.text)
+                fac_link.append(f_element.get_attribute('href'))
+            fac_name_link = list(zip(fac_list, fac_link))
+
+            # get the name of trainings
+            trai_path = '//*[@id="main-wrapper"]/header/div[3]/div/div/div[2]/nav/ul/li[4]/ul/li[2]/ul'
+            ul_tag = self.wait.until(ec.presence_of_element_located((By.XPATH, trai_path)))
+            f_div = ul_tag.find_elements(By.XPATH, 'li')
+            trai_list = []
+            trai_link = []
+            for element in f_div:
+                f_element = element.find_element(By.TAG_NAME, 'a')
+                trai_list.append(f_element.text)
+                trai_link.append(f_element.get_attribute("href"))
+            trai_name_link = list(zip(trai_list, trai_link))
+            fac_name_link.extend(trai_name_link)
+            logger.info(f"L'{name} compte {len(fac_name_link)} "
+                        f"facultes et formations. La list: {fac_name_link} et son lien est: {url}")
+
+        except Exception as e:
+            logger.error(f'Access error to {url}: {e}')
+
+    def get_umarou(self):
+        url = 'http://www.univ-maroua.cm'
+        try:
+            self.driver.get(url)
+            name = self.wait.until(ec.presence_of_element_located((By.XPATH, '//*[@id="logo"]/div[1]'))).text
+            school_path = '//*[@id="block-mainmenu"]/div[2]/div/div/ul/li[3]/a'
+            self.wait.until(ec.element_to_be_clickable((By.XPATH, school_path))).click()
+
+            sch_path = '//*[@id="block-mainmenu"]/div[2]/div/div/ul/li[3]/ul'
+            sch_div = self.wait.until(ec.presence_of_element_located((By.XPATH, sch_path)))
+            li_tag = sch_div.find_elements(By.TAG_NAME, 'li')
+            fac_list = []
+            fac_link = []
+            for element in li_tag:
+                f_element = element.find_element(By.TAG_NAME, 'a')
+                fac_list.append(f_element.text)
+                fac_link.append(f_element.get_attribute('href'))
+            fac_name_link = list(zip(fac_list, fac_link))
+
+            logger.info(f"L'{name} compte {len(fac_name_link)} "
+                        f"facultes et formations. La list: {fac_name_link} et son lien est: {url}")
+
+        except Exception as e:
+            logger.error(f'Access error to {url}: {e}')
+
+    def close(self):
+        self.driver.quit()
 
 
-ubertoua('https://www.univ-bertoua.cm/')
-
+yaou = Univers()
+yaou.get_ugaroua()
+yaou.close()

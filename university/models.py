@@ -4,6 +4,7 @@ from django.db import models
 class University(models.Model):
     name = models.CharField(max_length=300)
     website = models.URLField()
+    description = models.TextField()
 
     class Meta:
         verbose_name = "University"
@@ -13,18 +14,20 @@ class University(models.Model):
         return self.name
 
 
-class FacultyTRaining(models.Model):
+class College(models.Model):
     university = models.ForeignKey(University, on_delete=models.CASCADE)
     name = models.CharField(max_length=300)
     link = models.URLField()
+    college_description = models.TextField()
 
     def __str__(self):
         return self.name
 
 
 class Department(models.Model):
-    faculty_training = models.ForeignKey(FacultyTRaining, on_delete=models.CASCADE)
+    college = models.ForeignKey(College, on_delete=models.CASCADE)
     name = models.CharField(max_length=200)
+    department_description = models.TextField()
 
     def __str__(self):
         return self.name

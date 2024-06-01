@@ -1,0 +1,1085 @@
+2024-05-28 10:23:17.935 | ERROR    | __main__:list_university:25 - Error to fetch the content from https://fr.wikipedia.org/wiki/Enseignement_sup%C3%A9rieur_et_recherche_au_Cameroun: HTTPSConnectionPool(host='fr.wikipedia.org', port=443): Max retries exceeded with url: /wiki/Enseignement_sup%C3%A9rieur_et_recherche_au_Cameroun (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x761cf0f81ba0>: Failed to resolve 'fr.wikipedia.org' ([Errno -3] Temporary failure in name resolution)"))
+2024-05-28 17:56:33.787 | ERROR    | __main__:get_url_content:28 - Access error to https://fr.wikipedia.org/w/index.php?title=Universit%C3%A9_d%27Ebolowa&action=edit&redlink=1: HTTPSConnectionPool(host='fr.wikipedia.org', port=443): Max retries exceeded with url: /w/index.php?title=Universit%C3%A9_d%27Ebolowa&action=edit&redlink=1 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x740d3eebb160>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+2024-05-29 09:45:18.486 | ERROR    | __main__:get_url_content:27 - Access error to h: Invalid URL 'h': No scheme supplied. Perhaps you meant https://h?
+2024-05-29 09:48:19.021 | ERROR    | __main__:get_url_content:27 - Access error to h: Invalid URL 'h': No scheme supplied. Perhaps you meant https://h?
+2024-05-29 10:01:01.174 | ERROR    | __main__:get_list_university_website:59 - error to fetch the website link of 'Création de Université d'Ebolowa': 'NoneType' object has no attribute 'find_all'
+2024-05-29 10:02:36.749 | ERROR    | __main__:get_list_university_website:59 - error to fetch the website link of 'Création de Université d'Ebolowa': 'NoneType' object has no attribute 'find_all'
+2024-05-29 10:02:38.367 | ERROR    | __main__:get_url_content:27 - Access error to http://ubuea.cm/: HTTPConnectionPool(host='ubuea.cm', port=80): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7ed5b5253bb0>: Failed to resolve 'ubuea.cm' ([Errno -3] Temporary failure in name resolution)"))
+2024-05-29 10:03:21.211 | ERROR    | __main__:get_list_university_website:58 - error to fetch the website link of 'Création de Université d'Ebolowa': 'NoneType' object has no attribute 'find_all'
+2024-05-29 10:03:22.837 | ERROR    | __main__:get_url_content:27 - Access error to http://ubuea.cm/: HTTPConnectionPool(host='ubuea.cm', port=80): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7b44095b7d60>: Failed to resolve 'ubuea.cm' ([Errno -3] Temporary failure in name resolution)"))
+2024-05-29 10:05:19.596 | ERROR    | __main__:get_list_university_website:58 - error to fetch the website link of 'Création de Université d'Ebolowa': 'NoneType' object has no attribute 'find_all'
+2024-05-29 10:06:27.363 | ERROR    | __main__:get_list_university_website:58 - error to fetch the website link of 'Création de Université d'Ebolowa': 'NoneType' object has no attribute 'find_all'
+2024-05-29 10:07:03.388 | ERROR    | __main__:get_list_university_website:58 - error to fetch the website link of 'Création de Université d'Ebolowa': 'NoneType' object has no attribute 'find_all'
+2024-05-29 10:08:22.455 | ERROR    | __main__:get_list_university_website:58 - error to fetch the website link of 'Création de Université d'Ebolowa': 'NoneType' object has no attribute 'find_all'
+2024-05-29 10:51:03.364 | ERROR    | __main__:get_list_university_website:58 - error to fetch the website link of 'Création de Université d'Ebolowa': 'NoneType' object has no attribute 'find_all'
+2024-05-29 10:53:50.718 | ERROR    | __main__:get_list_university_website:58 - error to fetch the website link of 'Création de Université d'Ebolowa': 'NoneType' object has no attribute 'find_all'
+2024-05-29 10:54:28.727 | ERROR    | __main__:get_list_university_website:58 - error to fetch the website link of 'Création de Université d'Ebolowa': 'NoneType' object has no attribute 'find_all'
+2024-05-29 10:56:21.100 | ERROR    | __main__:get_list_university_website:58 - error to fetch the website link of 'Création de Université d'Ebolowa': 'NoneType' object has no attribute 'find_all'
+2024-05-29 10:58:46.690 | ERROR    | __main__:get_list_university_website:58 - error to fetch the website link of 'Création de Université d'Ebolowa': 'NoneType' object has no attribute 'find_all'
+2024-05-29 11:00:13.892 | ERROR    | __main__:get_list_university_website:58 - error to fetch the website link of 'Création de Université d'Ebolowa': 'NoneType' object has no attribute 'find_all'
+2024-05-29 11:03:08.285 | ERROR    | __main__:get_list_university_website:59 - error to fetch the website link of 'Création de Université d'Ebolowa': 'NoneType' object has no attribute 'find_all'
+2024-05-29 12:21:54.335 | ERROR    | __main__:get_list_university_website:59 - error to fetch the website link of 'Création de Université d'Ebolowa': 'NoneType' object has no attribute 'find_all'
+2024-05-29 12:23:46.446 | ERROR    | __main__:get_list_university_website:59 - error to fetch the website link of 'Création de Université d'Ebolowa': 'NoneType' object has no attribute 'find_all'
+2024-05-29 12:24:37.142 | ERROR    | __main__:get_list_university_website:59 - error to fetch the website link of 'Création de Université d'Ebolowa': 'NoneType' object has no attribute 'find_all'
+2024-05-29 12:53:34.778 | ERROR    | __main__:get_list_university_website:59 - error to fetch the website link of 'Création de Université d'Ebolowa': 'NoneType' object has no attribute 'find_all'
+2024-05-29 13:07:02.937 | ERROR    | __main__:get_list_university_website:59 - error to fetch the website link of 'Création de Université d'Ebolowa': 'NoneType' object has no attribute 'find_all'
+2024-05-29 13:08:22.651 | ERROR    | __main__:get_list_university_website:59 - error to fetch the website link of 'Création de Université d'Ebolowa': 'NoneType' object has no attribute 'find_all'
+2024-05-29 13:16:23.806 | ERROR    | __main__:get_list_university_website:59 - error to fetch the website link of 'Création de Université d'Ebolowa': 'NoneType' object has no attribute 'find_all'
+2024-05-29 13:17:13.815 | ERROR    | __main__:get_list_university_website:59 - error to fetch the website link of 'Création de Université d'Ebolowa': 'NoneType' object has no attribute 'find_all'
+2024-05-29 13:30:29.361 | ERROR    | __main__:get_list_university_website:59 - error to fetch the website link of 'Création de Université d'Ebolowa': 'NoneType' object has no attribute 'find_all'
+2024-05-29 13:31:15.238 | ERROR    | __main__:get_list_university_website:59 - error to fetch the website link of 'Création de Université d'Ebolowa': 'NoneType' object has no attribute 'find_all'
+2024-05-29 13:33:55.011 | ERROR    | __main__:get_list_university_website:59 - error to fetch the website link of 'Création de Université d'Ebolowa': 'NoneType' object has no attribute 'find_all'
+2024-05-29 13:34:20.567 | ERROR    | __main__:get_list_university_website:59 - error to fetch the website link of 'Création de Université d'Ebolowa': 'NoneType' object has no attribute 'find_all'
+2024-05-29 13:35:01.514 | ERROR    | __main__:get_list_university_website:59 - error to fetch the website link of 'Création de Université d'Ebolowa': 'NoneType' object has no attribute 'find_all'
+2024-05-29 13:35:05.254 | ERROR    | __main__:get_url_content:28 - Access error to http://www.uy1.uninet.cm/: HTTPConnectionPool(host='www.uy1.uninet.cm', port=80): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7c64805827a0>: Failed to resolve 'www.uy1.uninet.cm' ([Errno -3] Temporary failure in name resolution)"))
+2024-05-29 14:00:21.737 | ERROR    | __main__:get_list_university_website:59 - error to fetch the website link of 'Création de Université d'Ebolowa': 'NoneType' object has no attribute 'find_all'
+2024-05-29 14:03:45.324 | ERROR    | __main__:get_list_university_website:59 - error to fetch the website link of 'Création de Université d'Ebolowa': 'NoneType' object has no attribute 'find_all'
+2024-05-29 14:30:38.844 | ERROR    | __main__:get_list_university_website:59 - error to fetch the website link of 'Création de Université d'Ebolowa': 'NoneType' object has no attribute 'find_all'
+2024-05-29 14:30:40.002 | ERROR    | __main__:get_url_content:28 - Access error to http://www.uy1.uninet.cm/: HTTPConnectionPool(host='www.uy1.uninet.cm', port=80): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7de339498190>: Failed to resolve 'www.uy1.uninet.cm' ([Errno -3] Temporary failure in name resolution)"))
+2024-05-29 14:36:22.923 | ERROR    | __main__:get_list_university_website:59 - error to fetch the website link of 'Création de Université d'Ebolowa': 'NoneType' object has no attribute 'find_all'
+2024-05-29 14:36:23.971 | ERROR    | __main__:get_url_content:28 - Access error to http://www.uy1.uninet.cm/: HTTPConnectionPool(host='www.uy1.uninet.cm', port=80): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x773fbf6e85b0>: Failed to resolve 'www.uy1.uninet.cm' ([Errno -3] Temporary failure in name resolution)"))
+2024-05-29 14:37:48.092 | ERROR    | __main__:get_list_university_website:59 - error to fetch the website link of 'Création de Université d'Ebolowa': 'NoneType' object has no attribute 'find_all'
+2024-05-29 14:37:49.191 | ERROR    | __main__:get_url_content:28 - Access error to http://www.uy1.uninet.cm/: HTTPConnectionPool(host='www.uy1.uninet.cm', port=80): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x78244a954520>: Failed to resolve 'www.uy1.uninet.cm' ([Errno -3] Temporary failure in name resolution)"))
+2024-05-29 14:39:11.779 | ERROR    | __main__:get_list_university_website:59 - error to fetch the website link of 'Création de Université d'Ebolowa': 'NoneType' object has no attribute 'find_all'
+2024-05-29 14:39:13.366 | ERROR    | __main__:get_url_content:28 - Access error to http://www.uy1.uninet.cm/: HTTPConnectionPool(host='www.uy1.uninet.cm', port=80): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x766d68f18b50>: Failed to resolve 'www.uy1.uninet.cm' ([Errno -3] Temporary failure in name resolution)"))
+2024-05-29 14:42:50.996 | ERROR    | __main__:get_list_university_website:59 - error to fetch the website link of 'Création de Université d'Ebolowa': 'NoneType' object has no attribute 'find_all'
+2024-05-29 14:42:52.278 | ERROR    | __main__:get_url_content:28 - Access error to http://www.uy1.uninet.cm/: HTTPConnectionPool(host='www.uy1.uninet.cm', port=80): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x779c3104feb0>: Failed to resolve 'www.uy1.uninet.cm' ([Errno -3] Temporary failure in name resolution)"))
+2024-05-29 14:44:31.182 | ERROR    | __main__:get_list_university_website:59 - error to fetch the website link of 'Création de Université d'Ebolowa': 'NoneType' object has no attribute 'find_all'
+2024-05-29 14:44:32.451 | ERROR    | __main__:get_url_content:28 - Access error to http://www.uy1.uninet.cm/: HTTPConnectionPool(host='www.uy1.uninet.cm', port=80): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x76f15a8503d0>: Failed to resolve 'www.uy1.uninet.cm' ([Errno -3] Temporary failure in name resolution)"))
+2024-05-29 14:45:36.779 | ERROR    | __main__:get_list_university_website:59 - error to fetch the website link of 'Création de Université d'Ebolowa': 'NoneType' object has no attribute 'find_all'
+2024-05-29 14:45:38.007 | ERROR    | __main__:get_url_content:28 - Access error to http://www.uy1.uninet.cm/: HTTPConnectionPool(host='www.uy1.uninet.cm', port=80): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7dbfa441faf0>: Failed to resolve 'www.uy1.uninet.cm' ([Errno -3] Temporary failure in name resolution)"))
+2024-05-29 14:45:56.855 | ERROR    | __main__:get_list_university_website:59 - error to fetch the website link of 'Création de Université d'Ebolowa': 'NoneType' object has no attribute 'find_all'
+2024-05-29 14:45:59.194 | ERROR    | __main__:get_url_content:28 - Access error to http://www.uy1.uninet.cm/: HTTPConnectionPool(host='www.uy1.uninet.cm', port=80): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7fe9078bbb20>: Failed to resolve 'www.uy1.uninet.cm' ([Errno -3] Temporary failure in name resolution)"))
+2024-05-29 14:51:57.294 | ERROR    | __main__:get_list_university_website:59 - error to fetch the website link of 'Création de Université d'Ebolowa': 'NoneType' object has no attribute 'find_all'
+2024-05-29 14:56:50.915 | ERROR    | __main__:get_list_university_website:59 - error to fetch the website link of 'Création de Université d'Ebolowa': 'NoneType' object has no attribute 'find_all'
+2024-05-29 14:59:22.313 | ERROR    | __main__:get_list_university_website:59 - error to fetch the website link of 'Création de Université d'Ebolowa': 'NoneType' object has no attribute 'find_all'
+2024-05-29 15:02:11.475 | ERROR    | __main__:get_list_university_website:59 - error to fetch the website link of 'Création de Université d'Ebolowa': 'NoneType' object has no attribute 'find_all'
+2024-05-29 15:02:13.401 | ERROR    | __main__:get_url_content:28 - Access error to http://www.uy1.uninet.cm/: HTTPConnectionPool(host='www.uy1.uninet.cm', port=80): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7b1005d151b0>: Failed to resolve 'www.uy1.uninet.cm' ([Errno -3] Temporary failure in name resolution)"))
+2024-05-29 15:05:00.402 | ERROR    | __main__:get_list_university_website:59 - error to fetch the website link of 'Création de Université d'Ebolowa': 'NoneType' object has no attribute 'find_all'
+2024-05-29 15:05:05.892 | ERROR    | __main__:get_url_content:28 - Access error to http://www.uy1.uninet.cm/: HTTPConnectionPool(host='www.uy1.uninet.cm', port=80): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7b984dc4ff40>: Failed to resolve 'www.uy1.uninet.cm' ([Errno -3] Temporary failure in name resolution)"))
+2024-05-29 15:05:49.377 | ERROR    | __main__:get_list_university_website:59 - error to fetch the website link of 'Création de Université d'Ebolowa': 'NoneType' object has no attribute 'find_all'
+2024-05-29 15:05:50.689 | ERROR    | __main__:get_url_content:28 - Access error to http://www.uy1.uninet.cm/: HTTPConnectionPool(host='www.uy1.uninet.cm', port=80): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7377bd019f30>: Failed to resolve 'www.uy1.uninet.cm' ([Errno -5] No address associated with hostname)"))
+2024-05-29 15:11:18.571 | ERROR    | __main__:get_list_university_website:59 - error to fetch the website link of 'Création de Université d'Ebolowa': 'NoneType' object has no attribute 'find_all'
+2024-05-29 15:12:12.093 | ERROR    | __main__:get_list_university_website:59 - error to fetch the website link of 'Création de Université d'Ebolowa': 'NoneType' object has no attribute 'find_all'
+2024-05-29 15:12:13.419 | ERROR    | __main__:get_url_content:28 - Access error to http://www.uy1.uninet.cm/: HTTPConnectionPool(host='www.uy1.uninet.cm', port=80): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x753dd19ebb50>: Failed to resolve 'www.uy1.uninet.cm' ([Errno -5] No address associated with hostname)"))
+2024-05-29 15:12:52.219 | ERROR    | __main__:get_list_university_website:59 - error to fetch the website link of 'Création de Université d'Ebolowa': 'NoneType' object has no attribute 'find_all'
+2024-05-29 15:12:53.393 | ERROR    | __main__:get_url_content:28 - Access error to http://www.uy1.uninet.cm/: HTTPConnectionPool(host='www.uy1.uninet.cm', port=80): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7f514d267e20>: Failed to resolve 'www.uy1.uninet.cm' ([Errno -5] No address associated with hostname)"))
+2024-05-29 15:13:33.393 | ERROR    | __main__:get_list_university_website:59 - error to fetch the website link of 'Création de Université d'Ebolowa': 'NoneType' object has no attribute 'find_all'
+2024-05-29 15:13:34.424 | ERROR    | __main__:get_url_content:28 - Access error to http://www.uy1.uninet.cm/: HTTPConnectionPool(host='www.uy1.uninet.cm', port=80): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x72921e717fd0>: Failed to resolve 'www.uy1.uninet.cm' ([Errno -5] No address associated with hostname)"))
+2024-05-29 15:17:36.405 | ERROR    | __main__:get_list_university_website:59 - error to fetch the website link of 'Création de Université d'Ebolowa': 'NoneType' object has no attribute 'find_all'
+2024-05-29 15:17:37.909 | ERROR    | __main__:get_url_content:28 - Access error to http://www.uy1.uninet.cm/: HTTPConnectionPool(host='www.uy1.uninet.cm', port=80): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x756d14ddbac0>: Failed to resolve 'www.uy1.uninet.cm' ([Errno -3] Temporary failure in name resolution)"))
+2024-05-29 15:22:33.481 | ERROR    | __main__:get_list_university_website:59 - error to fetch the website link of 'Création de Université d'Ebolowa': 'NoneType' object has no attribute 'find_all'
+2024-05-29 15:22:34.867 | ERROR    | __main__:get_url_content:28 - Access error to http://www.uy1.uninet.cm/: HTTPConnectionPool(host='www.uy1.uninet.cm', port=80): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7173d77ebd30>: Failed to resolve 'www.uy1.uninet.cm' ([Errno -3] Temporary failure in name resolution)"))
+2024-05-29 15:26:31.496 | ERROR    | __main__:get_list_university_website:59 - error to fetch the website link of 'Création de Université d'Ebolowa': 'NoneType' object has no attribute 'find_all'
+2024-05-29 15:26:32.807 | ERROR    | __main__:get_url_content:28 - Access error to http://www.uy1.uninet.cm/: HTTPConnectionPool(host='www.uy1.uninet.cm', port=80): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7f517161ff40>: Failed to resolve 'www.uy1.uninet.cm' ([Errno -3] Temporary failure in name resolution)"))
+2024-05-29 15:26:32.808 | ERROR    | __main__:uyaounde1:119 - Error to get header: 'NoneType' object has no attribute 'find'
+2024-05-29 15:30:34.300 | ERROR    | __main__:get_list_university_website:59 - error to fetch the website link of 'Création de Université d'Ebolowa': 'NoneType' object has no attribute 'find_all'
+2024-05-29 15:31:22.311 | ERROR    | __main__:get_list_university_website:59 - error to fetch the website link of 'Création de Université d'Ebolowa': 'NoneType' object has no attribute 'find_all'
+2024-05-29 15:31:36.201 | ERROR    | __main__:get_list_university_website:59 - error to fetch the website link of 'Création de Université d'Ebolowa': 'NoneType' object has no attribute 'find_all'
+2024-05-29 15:36:03.805 | ERROR    | __main__:get_list_university_website:59 - error to fetch the website link of 'Création de Université d'Ebolowa': 'NoneType' object has no attribute 'find_all'
+2024-05-29 15:36:32.450 | ERROR    | __main__:get_list_university_website:59 - error to fetch the website link of 'Création de Université d'Ebolowa': 'NoneType' object has no attribute 'find_all'
+2024-05-29 15:43:24.943 | ERROR    | __main__:get_list_university_website:59 - error to fetch the website link of 'Création de Université d'Ebolowa': 'NoneType' object has no attribute 'find_all'
+2024-05-29 15:44:43.377 | ERROR    | __main__:get_list_university_website:59 - error to fetch the website link of 'Création de Université d'Ebolowa': 'NoneType' object has no attribute 'find_all'
+2024-05-29 15:46:06.797 | ERROR    | __main__:get_list_university_website:59 - error to fetch the website link of 'Création de Université d'Ebolowa': 'NoneType' object has no attribute 'find_all'
+2024-05-29 15:46:08.504 | ERROR    | __main__:get_url_content:28 - Access error to http://www.uy1.uninet.cm/: HTTPConnectionPool(host='www.uy1.uninet.cm', port=80): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7bd58060d1b0>: Failed to resolve 'www.uy1.uninet.cm' ([Errno -3] Temporary failure in name resolution)"))
+2024-05-29 15:46:08.505 | ERROR    | __main__:uyaounde1:129 - Error to get header: 'NoneType' object has no attribute 'find'
+2024-05-29 16:09:03.402 | ERROR    | __main__:get_list_university_website:59 - error to fetch the website link of 'Création de Université d'Ebolowa': 'NoneType' object has no attribute 'find_all'
+2024-05-29 16:09:07.978 | ERROR    | __main__:get_url_content:28 - Access error to http://www.uy1.uninet.cm/: HTTPConnectionPool(host='www.uy1.uninet.cm', port=80): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7f9d15d3dc90>: Failed to resolve 'www.uy1.uninet.cm' ([Errno -3] Temporary failure in name resolution)"))
+2024-05-29 16:09:07.979 | ERROR    | __main__:uyaounde1:129 - Error to get header: 'NoneType' object has no attribute 'find'
+2024-05-29 16:11:21.943 | ERROR    | __main__:get_list_university_website:59 - error to fetch the website link of 'Création de Université d'Ebolowa': 'NoneType' object has no attribute 'find_all'
+2024-05-29 16:11:22.952 | ERROR    | __main__:get_url_content:28 - Access error to http://www.uy1.uninet.cm/: HTTPConnectionPool(host='www.uy1.uninet.cm', port=80): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7e6c4474a0b0>: Failed to resolve 'www.uy1.uninet.cm' ([Errno -5] No address associated with hostname)"))
+2024-05-29 16:11:22.953 | ERROR    | __main__:uyaounde1:129 - Error to get header: 'NoneType' object has no attribute 'find'
+2024-05-29 16:19:35.140 | ERROR    | __main__:get_list_university_website:59 - error to fetch the website link of 'Création de Université d'Ebolowa': 'NoneType' object has no attribute 'find_all'
+2024-05-29 16:36:48.920 | ERROR    | __main__:get_list_university_website:59 - error to fetch the website link of 'Création de Université d'Ebolowa': 'NoneType' object has no attribute 'find_all'
+2024-05-29 16:36:49.975 | ERROR    | __main__:get_url_content:28 - Access error to http://www.uy1.uninet.cm/: HTTPConnectionPool(host='www.uy1.uninet.cm', port=80): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7c914ae85c30>: Failed to resolve 'www.uy1.uninet.cm' ([Errno -3] Temporary failure in name resolution)"))
+2024-05-29 16:36:49.976 | ERROR    | __main__:uyaounde1:140 - Error to get header: 'NoneType' object has no attribute 'find'
+2024-05-29 16:49:41.362 | ERROR    | __main__:get_list_university_website:61 - error to fetch the website link of 'Création de Université d'Ebolowa': 'NoneType' object has no attribute 'find_all'
+2024-05-29 16:50:02.481 | ERROR    | __main__:get_url_content:29 - Access error to http://www.uy1.uninet.cm/: HTTPConnectionPool(host='www.uy1.uninet.cm', port=80): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7d58d4401cf0>: Failed to resolve 'www.uy1.uninet.cm' ([Errno -3] Temporary failure in name resolution)"))
+2024-05-29 16:50:02.482 | ERROR    | __main__:uyaounde1:146 - Error to get header: 'NoneType' object has no attribute 'find'
+2024-05-29 16:53:16.409 | ERROR    | __main__:get_list_university_website:61 - error to fetch the website link of 'Création de Université d'Ebolowa': 'NoneType' object has no attribute 'find_all'
+2024-05-29 17:01:42.557 | ERROR    | __main__:get_list_university_website:61 - error to fetch the website link of 'Création de Université d'Ebolowa': 'NoneType' object has no attribute 'find_all'
+2024-05-29 17:01:48.051 | ERROR    | __main__:get_url_content:29 - Access error to http://www.uy1.uninet.cm/: HTTPConnectionPool(host='www.uy1.uninet.cm', port=80): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x782f1dfdea10>: Failed to resolve 'www.uy1.uninet.cm' ([Errno -3] Temporary failure in name resolution)"))
+2024-05-29 17:01:48.051 | ERROR    | __main__:uyaounde1:146 - Error to get header: 'NoneType' object has no attribute 'find'
+2024-05-29 17:03:26.991 | ERROR    | __main__:get_list_university_website:61 - error to fetch the website link of 'Création de Université d'Ebolowa': 'NoneType' object has no attribute 'find_all'
+2024-05-29 17:03:33.332 | ERROR    | __main__:get_url_content:29 - Access error to http://www.uy1.uninet.cm/: HTTPConnectionPool(host='www.uy1.uninet.cm', port=80): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x725cf0486920>: Failed to resolve 'www.uy1.uninet.cm' ([Errno -5] No address associated with hostname)"))
+2024-05-29 17:03:33.333 | ERROR    | __main__:uyaounde1:146 - Error to get header: 'NoneType' object has no attribute 'find'
+2024-05-29 17:05:48.718 | ERROR    | __main__:get_list_university_website:61 - error to fetch the website link of 'Création de Université d'Ebolowa': 'NoneType' object has no attribute 'find_all'
+2024-05-29 17:05:54.665 | ERROR    | __main__:get_url_content:29 - Access error to http://www.uy1.uninet.cm/: HTTPConnectionPool(host='www.uy1.uninet.cm', port=80): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7c10e58e8580>: Failed to resolve 'www.uy1.uninet.cm' ([Errno -5] No address associated with hostname)"))
+2024-05-29 17:05:54.666 | ERROR    | __main__:uyaounde1:146 - Error to get header: 'NoneType' object has no attribute 'find'
+2024-05-29 17:09:34.594 | ERROR    | __main__:get_list_university_website:61 - error to fetch the website link of 'Création de Université d'Ebolowa': 'NoneType' object has no attribute 'find_all'
+2024-05-29 17:09:38.552 | ERROR    | __main__:get_url_content:29 - Access error to http://www.uy1.uninet.cm/: HTTPConnectionPool(host='www.uy1.uninet.cm', port=80): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7c556320b490>: Failed to resolve 'www.uy1.uninet.cm' ([Errno -5] No address associated with hostname)"))
+2024-05-29 17:09:38.553 | ERROR    | __main__:uyaounde1:146 - Error to get header: 'NoneType' object has no attribute 'find'
+2024-05-29 17:16:19.176 | ERROR    | __main__:get_list_university_website:61 - error to fetch the website link of 'Création de Université d'Ebolowa': 'NoneType' object has no attribute 'find_all'
+2024-05-29 17:16:25.858 | ERROR    | __main__:get_url_content:29 - Access error to http://www.uy1.uninet.cm/: HTTPConnectionPool(host='www.uy1.uninet.cm', port=80): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x75c79af17610>: Failed to resolve 'www.uy1.uninet.cm' ([Errno -3] Temporary failure in name resolution)"))
+2024-05-29 17:16:25.859 | ERROR    | __main__:uyaounde1:146 - Error to get header: 'NoneType' object has no attribute 'find'
+2024-05-29 17:20:52.793 | ERROR    | __main__:get_list_university_website:61 - error to fetch the website link of 'Création de Université d'Ebolowa': 'NoneType' object has no attribute 'find_all'
+2024-05-29 17:21:08.841 | ERROR    | __main__:get_url_content:29 - Access error to http://www.uy1.uninet.cm/: HTTPConnectionPool(host='www.uy1.uninet.cm', port=80): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x78da88e0a5c0>: Failed to resolve 'www.uy1.uninet.cm' ([Errno -3] Temporary failure in name resolution)"))
+2024-05-29 17:21:08.843 | ERROR    | __main__:uyaounde1:146 - Error to get header: 'NoneType' object has no attribute 'find'
+2024-05-29 17:24:26.242 | ERROR    | __main__:get_list_university_website:61 - error to fetch the website link of 'Création de Université d'Ebolowa': 'NoneType' object has no attribute 'find_all'
+2024-05-29 17:25:56.350 | ERROR    | __main__:get_list_university_website:61 - error to fetch the website link of 'Création de Université d'Ebolowa': 'NoneType' object has no attribute 'find_all'
+2024-05-29 17:26:02.708 | ERROR    | __main__:get_url_content:29 - Access error to http://www.uy1.uninet.cm/: HTTPConnectionPool(host='www.uy1.uninet.cm', port=80): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x790f9c090340>: Failed to resolve 'www.uy1.uninet.cm' ([Errno -3] Temporary failure in name resolution)"))
+2024-05-29 17:26:02.709 | ERROR    | __main__:uyaounde1:146 - Error to get header: 'NoneType' object has no attribute 'find'
+2024-05-29 17:28:16.974 | ERROR    | __main__:get_list_university_website:61 - error to fetch the website link of 'Création de Université d'Ebolowa': 'NoneType' object has no attribute 'find_all'
+2024-05-29 17:30:01.382 | ERROR    | __main__:get_list_university_website:61 - error to fetch the website link of 'Création de Université d'Ebolowa': 'NoneType' object has no attribute 'find_all'
+2024-05-29 17:35:48.376 | ERROR    | __main__:get_list_university_website:61 - error to fetch the website link of 'Création de Université d'Ebolowa': 'NoneType' object has no attribute 'find_all'
+2024-05-29 17:37:22.535 | ERROR    | __main__:get_list_university_website:61 - error to fetch the website link of 'Création de Université d'Ebolowa': 'NoneType' object has no attribute 'find_all'
+2024-05-29 17:39:32.563 | ERROR    | __main__:get_list_university_website:61 - error to fetch the website link of 'Création de Université d'Ebolowa': 'NoneType' object has no attribute 'find_all'
+2024-05-29 17:40:56.187 | ERROR    | __main__:get_list_university_website:61 - error to fetch the website link of 'Création de Université d'Ebolowa': 'NoneType' object has no attribute 'find_all'
+2024-05-29 17:41:00.835 | ERROR    | __main__:get_url_content:29 - Access error to http://www.uy1.uninet.cm/: HTTPConnectionPool(host='www.uy1.uninet.cm', port=80): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x79b3cf6e89a0>: Failed to resolve 'www.uy1.uninet.cm' ([Errno -3] Temporary failure in name resolution)"))
+2024-05-29 17:41:00.836 | ERROR    | __main__:uyaounde1:146 - Error to get header: 'NoneType' object has no attribute 'find'
+2024-05-29 18:06:14.495 | ERROR    | __main__:get_list_university_website:61 - error to fetch the website link of 'Création de Université d'Ebolowa': 'NoneType' object has no attribute 'find_all'
+2024-05-29 18:07:42.383 | ERROR    | __main__:get_list_university_website:61 - error to fetch the website link of 'Création de Université d'Ebolowa': 'NoneType' object has no attribute 'find_all'
+2024-05-29 18:07:46.379 | ERROR    | __main__:get_url_content:29 - Access error to http://www.uy1.uninet.cm/: HTTPConnectionPool(host='www.uy1.uninet.cm', port=80): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x75c2a4f9a890>: Failed to resolve 'www.uy1.uninet.cm' ([Errno -3] Temporary failure in name resolution)"))
+2024-05-29 18:07:46.381 | ERROR    | __main__:uyaounde1:146 - Error to get header: 'NoneType' object has no attribute 'find'
+2024-05-29 18:36:25.946 | ERROR    | __main__:get_list_university_website:61 - error to fetch the website link of 'Création de Université d'Ebolowa': 'NoneType' object has no attribute 'find_all'
+2024-05-29 18:36:31.724 | ERROR    | __main__:get_url_content:29 - Access error to http://www.uy1.uninet.cm/: HTTPConnectionPool(host='www.uy1.uninet.cm', port=80): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7b1d86d7e590>: Failed to resolve 'www.uy1.uninet.cm' ([Errno -3] Temporary failure in name resolution)"))
+2024-05-29 18:36:31.724 | ERROR    | __main__:uyaounde1:134 - Error to get header: 'NoneType' object has no attribute 'find'
+2024-05-29 19:00:12.834 | ERROR    | __main__:get_list_university_website:72 - error to fetch the website link of 'Création de Université d'Ebolowa': 'NoneType' object has no attribute 'find_all'
+2024-05-29 19:02:27.716 | ERROR    | __main__:get_list_university_website:72 - error to fetch the website link of 'Création de Université d'Ebolowa': 'NoneType' object has no attribute 'find_all'
+2024-05-29 19:02:31.730 | ERROR    | __main__:get_url_content:29 - Access error to http://www.uy1.uninet.cm/: HTTPConnectionPool(host='www.uy1.uninet.cm', port=80): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x73c2e6402aa0>: Failed to resolve 'www.uy1.uninet.cm' ([Errno -3] Temporary failure in name resolution)"))
+2024-05-29 19:02:31.732 | ERROR    | __main__:uyaounde1:145 - Error to get header: 'NoneType' object has no attribute 'find'
+2024-05-29 19:09:03.120 | ERROR    | __main__:get_list_university_website:66 - error to fetch the website link of 'Création de Université d'Ebolowa': 'NoneType' object has no attribute 'find_all'
+2024-05-29 19:10:11.171 | ERROR    | __main__:get_list_university_website:66 - error to fetch the website link of 'Création de Université d'Ebolowa': 'NoneType' object has no attribute 'find_all'
+2024-05-29 19:10:14.181 | ERROR    | __main__:udschang:109 - https://www.univ-dschang.org/ doesn't match to university
+2024-05-29 19:12:11.892 | ERROR    | __main__:get_list_university_website:66 - error to fetch the website link of 'Création de Université d'Ebolowa': 'NoneType' object has no attribute 'find_all'
+2024-05-29 19:13:19.912 | ERROR    | __main__:get_list_university_website:66 - error to fetch the website link of 'Création de Université d'Ebolowa': 'NoneType' object has no attribute 'find_all'
+2024-05-29 19:13:22.924 | ERROR    | __main__:udschang:109 - http://www.univ-dschang.org/ doesn't match to university
+2024-05-29 19:16:28.030 | ERROR    | __main__:get_list_university_website:66 - error to fetch the website link of 'Création de Université d'Ebolowa': 'NoneType' object has no attribute 'find_all'
+2024-05-29 19:17:37.439 | ERROR    | __main__:get_list_university_website:66 - error to fetch the website link of 'Création de Université d'Ebolowa': 'NoneType' object has no attribute 'find_all'
+2024-05-29 19:19:49.643 | ERROR    | __main__:get_list_university_website:66 - error to fetch the website link of 'Création de Université d'Ebolowa': 'NoneType' object has no attribute 'find_all'
+2024-05-29 19:20:58.158 | ERROR    | __main__:get_list_university_website:66 - error to fetch the website link of 'Création de Université d'Ebolowa': 'NoneType' object has no attribute 'find_all'
+2024-05-29 19:21:01.401 | ERROR    | __main__:get_url_content:34 - Access error to http://www.uy1.uninet.cm/: HTTPConnectionPool(host='www.uy1.uninet.cm', port=80): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7b8471a0bac0>: Failed to resolve 'www.uy1.uninet.cm' ([Errno -3] Temporary failure in name resolution)"))
+2024-05-29 19:21:01.402 | ERROR    | __main__:uyaounde1:139 - Error to get header: 'NoneType' object has no attribute 'find'
+2024-05-30 09:15:56.438 | ERROR    | __main__:get_list_university_website:66 - error to fetch the website link of 'Création de Université d'Ebolowa': 'NoneType' object has no attribute 'find_all'
+2024-05-30 09:17:05.059 | ERROR    | __main__:get_list_university_website:66 - error to fetch the website link of 'Création de Université d'Ebolowa': 'NoneType' object has no attribute 'find_all'
+2024-05-30 09:17:08.246 | ERROR    | __main__:get_url_content:34 - Access error to http://www.uy1.uninet.cm/: HTTPConnectionPool(host='www.uy1.uninet.cm', port=80): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x78697080b4f0>: Failed to resolve 'www.uy1.uninet.cm' ([Errno -3] Temporary failure in name resolution)"))
+2024-05-30 09:17:08.246 | ERROR    | __main__:uyaounde1:139 - Error to get header: 'NoneType' object has no attribute 'find'
+2024-05-30 09:33:01.657 | ERROR    | __main__:get_list_university_website:66 - error to fetch the website link of 'Création de Université d'Ebolowa': 'NoneType' object has no attribute 'find_all'
+2024-05-30 09:37:25.519 | ERROR    | __main__:get_list_university_website:66 - error to fetch the website link of 'Création de Université d'Ebolowa': 'NoneType' object has no attribute 'find_all'
+2024-05-30 09:45:22.034 | ERROR    | __main__:get_list_university_website:66 - error to fetch the website link of 'Création de Université d'Ebolowa': 'NoneType' object has no attribute 'find_all'
+2024-05-30 09:56:31.143 | ERROR    | __main__:get_list_university_website:66 - error to fetch the website link of 'Création de Université d'Ebolowa': 'NoneType' object has no attribute 'find_all'
+2024-05-30 10:47:58.227 | ERROR    | __main__:get_list_university_website:66 - error to fetch the website link of 'Création de Université d'Ebolowa': 'NoneType' object has no attribute 'find_all'
+2024-05-30 10:53:02.490 | ERROR    | __main__:get_list_university_website:66 - error to fetch the website link of 'Création de Université d'Ebolowa': 'NoneType' object has no attribute 'find_all'
+2024-05-30 10:56:12.632 | ERROR    | __main__:get_list_university_website:66 - error to fetch the website link of 'Création de Université d'Ebolowa': 'NoneType' object has no attribute 'find_all'
+2024-05-30 11:03:18.615 | ERROR    | __main__:get_list_university_website:66 - error to fetch the website link of 'Création de Université d'Ebolowa': 'NoneType' object has no attribute 'find_all'
+2024-05-30 11:10:56.883 | ERROR    | __main__:get_list_university_website:66 - error to fetch the website link of 'Création de Université d'Ebolowa': 'NoneType' object has no attribute 'find_all'
+2024-05-30 11:30:47.171 | ERROR    | __main__:get_list_university_website:66 - error to fetch the website link of 'Création de Université d'Ebolowa': 'NoneType' object has no attribute 'find_all'
+2024-05-30 11:33:37.000 | ERROR    | __main__:get_list_university_website:66 - error to fetch the website link of 'Création de Université d'Ebolowa': 'NoneType' object has no attribute 'find_all'
+2024-05-30 11:37:07.136 | ERROR    | __main__:get_list_university_website:66 - error to fetch the website link of 'Création de Université d'Ebolowa': 'NoneType' object has no attribute 'find_all'
+2024-05-30 11:45:02.114 | ERROR    | __main__:get_list_university_website:66 - error to fetch the website link of 'Création de Université d'Ebolowa': 'NoneType' object has no attribute 'find_all'
+2024-05-30 11:46:35.282 | ERROR    | __main__:get_url_content:34 - Access error to https://fr.wikipedia.org/wiki/Universit%C3%A9_de_Bu%C3%A9a: HTTPSConnectionPool(host='fr.wikipedia.org', port=443): Max retries exceeded with url: /wiki/Universit%C3%A9_de_Bu%C3%A9a (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x73b1203e7c10>: Failed to resolve 'fr.wikipedia.org' ([Errno -3] Temporary failure in name resolution)"))
+2024-05-30 12:07:25.988 | ERROR    | __main__:get_list_university_website:66 - error to fetch the website link of 'Création de Université d'Ebolowa': 'NoneType' object has no attribute 'find_all'
+2024-05-30 12:07:29.894 | ERROR    | __main__:get_url_content:34 - Access error to https://www.univ-bertoua.cm/: HTTPSConnectionPool(host='www.univ-bertoua.cm', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x787215f9c490>: Failed to resolve 'www.univ-bertoua.cm' ([Errno -3] Temporary failure in name resolution)"))
+2024-05-30 12:12:20.300 | ERROR    | __main__:get_list_university_website:66 - error to fetch the website link of 'Création de Université d'Ebolowa': 'NoneType' object has no attribute 'find_all'
+2024-05-30 12:12:24.266 | ERROR    | __main__:get_url_content:34 - Access error to https://www.univ-bertoua.cm/: HTTPSConnectionPool(host='www.univ-bertoua.cm', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x72764ccf8580>: Failed to resolve 'www.univ-bertoua.cm' ([Errno -3] Temporary failure in name resolution)"))
+2024-05-30 12:40:48.396 | ERROR    | __main__:get_list_university_website:66 - error to fetch the website link of 'Création de Université d'Ebolowa': 'NoneType' object has no attribute 'find_all'
+2024-05-30 13:32:53.538 | ERROR    | __main__:get_list_university_website:66 - error to fetch the website link of 'Création de Université d'Ebolowa': 'NoneType' object has no attribute 'find_all'
+2024-05-30 14:09:57.765 | ERROR    | __main__:get_url_content:31 - Erreur lors de l'accès à https://www.uy1.uninet.cm/: Message: unknown error: net::ERR_INTERNET_DISCONNECTED
+  (Session info: chrome=124.0.6367.201)
+Stacktrace:
+#0 0x5fff3821bdc3 <unknown>
+#1 0x5fff37f0a4e7 <unknown>
+#2 0x5fff37f027e9 <unknown>
+#3 0x5fff37ef27c2 <unknown>
+#4 0x5fff37ef3db1 <unknown>
+#5 0x5fff37ef2b2e <unknown>
+#6 0x5fff37ef2251 <unknown>
+#7 0x5fff37ef20d3 <unknown>
+#8 0x5fff37ef005c <unknown>
+#9 0x5fff37ef057a <unknown>
+#10 0x5fff37f0ce6f <unknown>
+#11 0x5fff37f967e5 <unknown>
+#12 0x5fff37f77452 <unknown>
+#13 0x5fff37f95c29 <unknown>
+#14 0x5fff37f771f3 <unknown>
+#15 0x5fff37f4828a <unknown>
+#16 0x5fff37f48c5e <unknown>
+#17 0x5fff381e00eb <unknown>
+#18 0x5fff381e403b <unknown>
+#19 0x5fff381cc201 <unknown>
+#20 0x5fff381e4ba2 <unknown>
+#21 0x5fff381b10bf <unknown>
+#22 0x5fff3820af18 <unknown>
+#23 0x5fff3820b0f0 <unknown>
+#24 0x5fff3821af14 <unknown>
+#25 0x7bd9b6c94ac3 <unknown>
+
+2024-05-30 15:09:48.150 | ERROR    | __main__:get_url_content:30 - Erreur lors de l'accès à https://www.uy1.uninet.cm/: Message: unknown error: net::ERR_NAME_NOT_RESOLVED
+  (Session info: chrome=124.0.6367.201)
+Stacktrace:
+#0 0x57279f550dc3 <unknown>
+#1 0x57279f23f4e7 <unknown>
+#2 0x57279f2377e9 <unknown>
+#3 0x57279f2277c2 <unknown>
+#4 0x57279f228db1 <unknown>
+#5 0x57279f227b2e <unknown>
+#6 0x57279f227251 <unknown>
+#7 0x57279f2270d3 <unknown>
+#8 0x57279f22505c <unknown>
+#9 0x57279f22557a <unknown>
+#10 0x57279f241e6f <unknown>
+#11 0x57279f2cb7e5 <unknown>
+#12 0x57279f2ac452 <unknown>
+#13 0x57279f2cac29 <unknown>
+#14 0x57279f2ac1f3 <unknown>
+#15 0x57279f27d28a <unknown>
+#16 0x57279f27dc5e <unknown>
+#17 0x57279f5150eb <unknown>
+#18 0x57279f51903b <unknown>
+#19 0x57279f501201 <unknown>
+#20 0x57279f519ba2 <unknown>
+#21 0x57279f4e60bf <unknown>
+#22 0x57279f53ff18 <unknown>
+#23 0x57279f5400f0 <unknown>
+#24 0x57279f54ff14 <unknown>
+#25 0x7c6a4c294ac3 <unknown>
+
+2024-05-30 15:13:16.390 | ERROR    | __main__:get_url_content:30 - Access error to https://www.uy1.uninet.cm/: Message: unknown error: net::ERR_NAME_NOT_RESOLVED
+  (Session info: chrome=124.0.6367.201)
+Stacktrace:
+#0 0x5ecbe0d8bdc3 <unknown>
+#1 0x5ecbe0a7a4e7 <unknown>
+#2 0x5ecbe0a727e9 <unknown>
+#3 0x5ecbe0a627c2 <unknown>
+#4 0x5ecbe0a63db1 <unknown>
+#5 0x5ecbe0a62b2e <unknown>
+#6 0x5ecbe0a62251 <unknown>
+#7 0x5ecbe0a620d3 <unknown>
+#8 0x5ecbe0a6005c <unknown>
+#9 0x5ecbe0a6057a <unknown>
+#10 0x5ecbe0a7ce6f <unknown>
+#11 0x5ecbe0b067e5 <unknown>
+#12 0x5ecbe0ae7452 <unknown>
+#13 0x5ecbe0b05c29 <unknown>
+#14 0x5ecbe0ae71f3 <unknown>
+#15 0x5ecbe0ab828a <unknown>
+#16 0x5ecbe0ab8c5e <unknown>
+#17 0x5ecbe0d500eb <unknown>
+#18 0x5ecbe0d5403b <unknown>
+#19 0x5ecbe0d3c201 <unknown>
+#20 0x5ecbe0d54ba2 <unknown>
+#21 0x5ecbe0d210bf <unknown>
+#22 0x5ecbe0d7af18 <unknown>
+#23 0x5ecbe0d7b0f0 <unknown>
+#24 0x5ecbe0d8af14 <unknown>
+#25 0x742150894ac3 <unknown>
+
+2024-05-30 15:13:16.391 | ERROR    | __main__:get_yaounde1:39 - html_content is None, cannot construct URL
+2024-05-30 15:13:55.834 | ERROR    | __main__:get_url_content:31 - Access error to https://www.uy1.uninet.cm/: Message: unknown error: net::ERR_NAME_NOT_RESOLVED
+  (Session info: chrome=124.0.6367.201)
+Stacktrace:
+#0 0x5cff2cf5cdc3 <unknown>
+#1 0x5cff2cc4b4e7 <unknown>
+#2 0x5cff2cc437e9 <unknown>
+#3 0x5cff2cc337c2 <unknown>
+#4 0x5cff2cc34db1 <unknown>
+#5 0x5cff2cc33b2e <unknown>
+#6 0x5cff2cc33251 <unknown>
+#7 0x5cff2cc330d3 <unknown>
+#8 0x5cff2cc3105c <unknown>
+#9 0x5cff2cc3157a <unknown>
+#10 0x5cff2cc4de6f <unknown>
+#11 0x5cff2ccd77e5 <unknown>
+#12 0x5cff2ccb8452 <unknown>
+#13 0x5cff2ccd6c29 <unknown>
+#14 0x5cff2ccb81f3 <unknown>
+#15 0x5cff2cc8928a <unknown>
+#16 0x5cff2cc89c5e <unknown>
+#17 0x5cff2cf210eb <unknown>
+#18 0x5cff2cf2503b <unknown>
+#19 0x5cff2cf0d201 <unknown>
+#20 0x5cff2cf25ba2 <unknown>
+#21 0x5cff2cef20bf <unknown>
+#22 0x5cff2cf4bf18 <unknown>
+#23 0x5cff2cf4c0f0 <unknown>
+#24 0x5cff2cf5bf14 <unknown>
+#25 0x7f87bbe94ac3 <unknown>
+
+2024-05-30 15:13:55.835 | ERROR    | __main__:get_yaounde1:40 - html_content is None, cannot construct URL
+2024-05-30 18:34:16.784 | ERROR    | __main__:get_yaounde1:38 - Access error to https://www.uy1.uninet.cm/: Message: unknown error: net::ERR_NAME_NOT_RESOLVED
+  (Session info: chrome=124.0.6367.201)
+Stacktrace:
+#0 0x5c78f2187dc3 <unknown>
+#1 0x5c78f1e764e7 <unknown>
+#2 0x5c78f1e6e7e9 <unknown>
+#3 0x5c78f1e5e7c2 <unknown>
+#4 0x5c78f1e5fdb1 <unknown>
+#5 0x5c78f1e5eb2e <unknown>
+#6 0x5c78f1e5e251 <unknown>
+#7 0x5c78f1e5e0d3 <unknown>
+#8 0x5c78f1e5c05c <unknown>
+#9 0x5c78f1e5c57a <unknown>
+#10 0x5c78f1e78e6f <unknown>
+#11 0x5c78f1f027e5 <unknown>
+#12 0x5c78f1ee3452 <unknown>
+#13 0x5c78f1f01c29 <unknown>
+#14 0x5c78f1ee31f3 <unknown>
+#15 0x5c78f1eb428a <unknown>
+#16 0x5c78f1eb4c5e <unknown>
+#17 0x5c78f214c0eb <unknown>
+#18 0x5c78f215003b <unknown>
+#19 0x5c78f2138201 <unknown>
+#20 0x5c78f2150ba2 <unknown>
+#21 0x5c78f211d0bf <unknown>
+#22 0x5c78f2176f18 <unknown>
+#23 0x5c78f21770f0 <unknown>
+#24 0x5c78f2186f14 <unknown>
+#25 0x7a1129a94ac3 <unknown>
+
+2024-05-30 19:34:00.671 | ERROR    | __main__:get_ubuea:62 - Access error to https://ubuea.cm/: Message: javascript error: {"status":32,"value":"An invalid or illegal selector was specified"}
+  (Session info: chrome=124.0.6367.201)
+Stacktrace:
+#0 0x63e6b06ecdc3 <unknown>
+#1 0x63e6b03db4e7 <unknown>
+#2 0x63e6b03e0a9c <unknown>
+#3 0x63e6b03e27ef <unknown>
+#4 0x63e6b03e287c <unknown>
+#5 0x63e6b0426068 <unknown>
+#6 0x63e6b0426411 <unknown>
+#7 0x63e6b0469774 <unknown>
+#8 0x63e6b044847d <unknown>
+#9 0x63e6b0466c29 <unknown>
+#10 0x63e6b04481f3 <unknown>
+#11 0x63e6b041928a <unknown>
+#12 0x63e6b0419c5e <unknown>
+#13 0x63e6b06b10eb <unknown>
+#14 0x63e6b06b503b <unknown>
+#15 0x63e6b069d201 <unknown>
+#16 0x63e6b06b5ba2 <unknown>
+#17 0x63e6b06820bf <unknown>
+#18 0x63e6b06dbf18 <unknown>
+#19 0x63e6b06dc0f0 <unknown>
+#20 0x63e6b06ebf14 <unknown>
+#21 0x7c21ef294ac3 <unknown>
+
+2024-05-30 19:35:45.984 | ERROR    | __main__:get_ubuea:62 - Access error to http://ubuea.cm/: Message: javascript error: {"status":32,"value":"An invalid or illegal selector was specified"}
+  (Session info: chrome=124.0.6367.201)
+Stacktrace:
+#0 0x5bfd97276dc3 <unknown>
+#1 0x5bfd96f654e7 <unknown>
+#2 0x5bfd96f6aa9c <unknown>
+#3 0x5bfd96f6c7ef <unknown>
+#4 0x5bfd96f6c87c <unknown>
+#5 0x5bfd96fb0068 <unknown>
+#6 0x5bfd96fb0411 <unknown>
+#7 0x5bfd96ff3774 <unknown>
+#8 0x5bfd96fd247d <unknown>
+#9 0x5bfd96ff0c29 <unknown>
+#10 0x5bfd96fd21f3 <unknown>
+#11 0x5bfd96fa328a <unknown>
+#12 0x5bfd96fa3c5e <unknown>
+#13 0x5bfd9723b0eb <unknown>
+#14 0x5bfd9723f03b <unknown>
+#15 0x5bfd97227201 <unknown>
+#16 0x5bfd9723fba2 <unknown>
+#17 0x5bfd9720c0bf <unknown>
+#18 0x5bfd97265f18 <unknown>
+#19 0x5bfd972660f0 <unknown>
+#20 0x5bfd97275f14 <unknown>
+#21 0x7cb6af094ac3 <unknown>
+
+2024-05-30 19:37:42.983 | ERROR    | __main__:get_ubuea:62 - Access error to http://ubuea.cm/: Message: javascript error: {"status":32,"value":"An invalid or illegal selector was specified"}
+  (Session info: chrome=124.0.6367.201)
+Stacktrace:
+#0 0x5f14ed092dc3 <unknown>
+#1 0x5f14ecd814e7 <unknown>
+#2 0x5f14ecd86a9c <unknown>
+#3 0x5f14ecd887ef <unknown>
+#4 0x5f14ecd8887c <unknown>
+#5 0x5f14ecdcc068 <unknown>
+#6 0x5f14ecdcc411 <unknown>
+#7 0x5f14ece0f774 <unknown>
+#8 0x5f14ecdee47d <unknown>
+#9 0x5f14ece0cc29 <unknown>
+#10 0x5f14ecdee1f3 <unknown>
+#11 0x5f14ecdbf28a <unknown>
+#12 0x5f14ecdbfc5e <unknown>
+#13 0x5f14ed0570eb <unknown>
+#14 0x5f14ed05b03b <unknown>
+#15 0x5f14ed043201 <unknown>
+#16 0x5f14ed05bba2 <unknown>
+#17 0x5f14ed0280bf <unknown>
+#18 0x5f14ed081f18 <unknown>
+#19 0x5f14ed0820f0 <unknown>
+#20 0x5f14ed091f14 <unknown>
+#21 0x7e9c5e694ac3 <unknown>
+
+2024-05-30 19:38:47.678 | ERROR    | __main__:get_ubuea:62 - Access error to http://ubuea.cm/: Message: invalid argument: 'using' must be a string
+  (Session info: chrome=124.0.6367.201)
+Stacktrace:
+#0 0x5a53b2a25dc3 <unknown>
+#1 0x5a53b27144e7 <unknown>
+#2 0x5a53b275eb26 <unknown>
+#3 0x5a53b275f411 <unknown>
+#4 0x5a53b2754013 <unknown>
+#5 0x5a53b278147d <unknown>
+#6 0x5a53b2753b98 <unknown>
+#7 0x5a53b278161e <unknown>
+#8 0x5a53b279fc29 <unknown>
+#9 0x5a53b27811f3 <unknown>
+#10 0x5a53b275228a <unknown>
+#11 0x5a53b2752c5e <unknown>
+#12 0x5a53b29ea0eb <unknown>
+#13 0x5a53b29ee03b <unknown>
+#14 0x5a53b29d6201 <unknown>
+#15 0x5a53b29eeba2 <unknown>
+#16 0x5a53b29bb0bf <unknown>
+#17 0x5a53b2a14f18 <unknown>
+#18 0x5a53b2a150f0 <unknown>
+#19 0x5a53b2a24f14 <unknown>
+#20 0x7c7d34694ac3 <unknown>
+
+2024-05-30 19:42:36.148 | ERROR    | __main__:get_ubuea:62 - Access error to http://ubuea.cm/: Message: invalid argument: 'using' must be a string
+  (Session info: chrome=124.0.6367.201)
+Stacktrace:
+#0 0x655168fc5dc3 <unknown>
+#1 0x655168cb44e7 <unknown>
+#2 0x655168cfeb26 <unknown>
+#3 0x655168cff411 <unknown>
+#4 0x655168cf4013 <unknown>
+#5 0x655168d2147d <unknown>
+#6 0x655168cf3b98 <unknown>
+#7 0x655168d2161e <unknown>
+#8 0x655168d3fc29 <unknown>
+#9 0x655168d211f3 <unknown>
+#10 0x655168cf228a <unknown>
+#11 0x655168cf2c5e <unknown>
+#12 0x655168f8a0eb <unknown>
+#13 0x655168f8e03b <unknown>
+#14 0x655168f76201 <unknown>
+#15 0x655168f8eba2 <unknown>
+#16 0x655168f5b0bf <unknown>
+#17 0x655168fb4f18 <unknown>
+#18 0x655168fb50f0 <unknown>
+#19 0x655168fc4f14 <unknown>
+#20 0x7f3016694ac3 <unknown>
+
+2024-05-30 19:44:47.235 | ERROR    | __main__:get_ubuea:62 - Access error to http://ubuea.cm/: Message: 
+Stacktrace:
+#0 0x61b580288dc3 <unknown>
+#1 0x61b57ff774e7 <unknown>
+#2 0x61b57ffc235d <unknown>
+#3 0x61b57ffc2411 <unknown>
+#4 0x61b580005774 <unknown>
+#5 0x61b57ffe447d <unknown>
+#6 0x61b580002c29 <unknown>
+#7 0x61b57ffe41f3 <unknown>
+#8 0x61b57ffb528a <unknown>
+#9 0x61b57ffb5c5e <unknown>
+#10 0x61b58024d0eb <unknown>
+#11 0x61b58025103b <unknown>
+#12 0x61b580239201 <unknown>
+#13 0x61b580251ba2 <unknown>
+#14 0x61b58021e0bf <unknown>
+#15 0x61b580277f18 <unknown>
+#16 0x61b5802780f0 <unknown>
+#17 0x61b580287f14 <unknown>
+#18 0x729b66894ac3 <unknown>
+
+2024-05-30 19:46:03.201 | ERROR    | __main__:get_ubuea:62 - Access error to http://ubuea.cm/: Message: invalid argument: 'using' must be a string
+  (Session info: chrome=124.0.6367.201)
+Stacktrace:
+#0 0x5ef599c1fdc3 <unknown>
+#1 0x5ef59990e4e7 <unknown>
+#2 0x5ef599958b26 <unknown>
+#3 0x5ef599959411 <unknown>
+#4 0x5ef59994e013 <unknown>
+#5 0x5ef59997b47d <unknown>
+#6 0x5ef59994db98 <unknown>
+#7 0x5ef59997b61e <unknown>
+#8 0x5ef599999c29 <unknown>
+#9 0x5ef59997b1f3 <unknown>
+#10 0x5ef59994c28a <unknown>
+#11 0x5ef59994cc5e <unknown>
+#12 0x5ef599be40eb <unknown>
+#13 0x5ef599be803b <unknown>
+#14 0x5ef599bd0201 <unknown>
+#15 0x5ef599be8ba2 <unknown>
+#16 0x5ef599bb50bf <unknown>
+#17 0x5ef599c0ef18 <unknown>
+#18 0x5ef599c0f0f0 <unknown>
+#19 0x5ef599c1ef14 <unknown>
+#20 0x7da5dbe94ac3 <unknown>
+
+2024-05-30 19:48:43.575 | ERROR    | __main__:get_ubuea:63 - Access error to http://ubuea.cm/: Message: invalid argument: 'using' must be a string
+  (Session info: chrome=124.0.6367.201)
+Stacktrace:
+#0 0x5a5200c0fdc3 <unknown>
+#1 0x5a52008fe4e7 <unknown>
+#2 0x5a5200948b26 <unknown>
+#3 0x5a5200949411 <unknown>
+#4 0x5a520093e013 <unknown>
+#5 0x5a520096b47d <unknown>
+#6 0x5a520093db98 <unknown>
+#7 0x5a520096b61e <unknown>
+#8 0x5a5200989c29 <unknown>
+#9 0x5a520096b1f3 <unknown>
+#10 0x5a520093c28a <unknown>
+#11 0x5a520093cc5e <unknown>
+#12 0x5a5200bd40eb <unknown>
+#13 0x5a5200bd803b <unknown>
+#14 0x5a5200bc0201 <unknown>
+#15 0x5a5200bd8ba2 <unknown>
+#16 0x5a5200ba50bf <unknown>
+#17 0x5a5200bfef18 <unknown>
+#18 0x5a5200bff0f0 <unknown>
+#19 0x5a5200c0ef14 <unknown>
+#20 0x7b4a7f694ac3 <unknown>
+
+2024-05-30 20:00:20.339 | ERROR    | __main__:get_ubuea:63 - Access error to http://ubuea.cm/: Message: invalid argument: 'using' must be a string
+  (Session info: chrome=124.0.6367.201)
+Stacktrace:
+#0 0x603d628c7dc3 <unknown>
+#1 0x603d625b64e7 <unknown>
+#2 0x603d62600b26 <unknown>
+#3 0x603d62601411 <unknown>
+#4 0x603d625f6013 <unknown>
+#5 0x603d6262347d <unknown>
+#6 0x603d625f5b98 <unknown>
+#7 0x603d6262361e <unknown>
+#8 0x603d62641c29 <unknown>
+#9 0x603d626231f3 <unknown>
+#10 0x603d625f428a <unknown>
+#11 0x603d625f4c5e <unknown>
+#12 0x603d6288c0eb <unknown>
+#13 0x603d6289003b <unknown>
+#14 0x603d62878201 <unknown>
+#15 0x603d62890ba2 <unknown>
+#16 0x603d6285d0bf <unknown>
+#17 0x603d628b6f18 <unknown>
+#18 0x603d628b70f0 <unknown>
+#19 0x603d628c6f14 <unknown>
+#20 0x7243c4a94ac3 <unknown>
+
+2024-05-30 20:31:00.969 | ERROR    | __main__:get_udouala:74 - Access error to https://www.univ-douala.cm/: Message: 
+Stacktrace:
+#0 0x649ff59a9dc3 <unknown>
+#1 0x649ff56984e7 <unknown>
+#2 0x649ff56e335d <unknown>
+#3 0x649ff56e3411 <unknown>
+#4 0x649ff5726774 <unknown>
+#5 0x649ff570547d <unknown>
+#6 0x649ff5723c29 <unknown>
+#7 0x649ff57051f3 <unknown>
+#8 0x649ff56d628a <unknown>
+#9 0x649ff56d6c5e <unknown>
+#10 0x649ff596e0eb <unknown>
+#11 0x649ff597203b <unknown>
+#12 0x649ff595a201 <unknown>
+#13 0x649ff5972ba2 <unknown>
+#14 0x649ff593f0bf <unknown>
+#15 0x649ff5998f18 <unknown>
+#16 0x649ff59990f0 <unknown>
+#17 0x649ff59a8f14 <unknown>
+#18 0x7074dca94ac3 <unknown>
+
+2024-05-30 20:43:51.998 | ERROR    | __main__:get_udouala:77 - Access error to https://www.univ-douala.cm/: Message: invalid argument: 'using' must be a string
+  (Session info: chrome=124.0.6367.201)
+Stacktrace:
+#0 0x5932f4b6adc3 <unknown>
+#1 0x5932f48594e7 <unknown>
+#2 0x5932f48a3b26 <unknown>
+#3 0x5932f48a4411 <unknown>
+#4 0x5932f4899013 <unknown>
+#5 0x5932f48c647d <unknown>
+#6 0x5932f4898b98 <unknown>
+#7 0x5932f48c661e <unknown>
+#8 0x5932f48e4c29 <unknown>
+#9 0x5932f48c61f3 <unknown>
+#10 0x5932f489728a <unknown>
+#11 0x5932f4897c5e <unknown>
+#12 0x5932f4b2f0eb <unknown>
+#13 0x5932f4b3303b <unknown>
+#14 0x5932f4b1b201 <unknown>
+#15 0x5932f4b33ba2 <unknown>
+#16 0x5932f4b000bf <unknown>
+#17 0x5932f4b59f18 <unknown>
+#18 0x5932f4b5a0f0 <unknown>
+#19 0x5932f4b69f14 <unknown>
+#20 0x7d791ae94ac3 <unknown>
+
+2024-05-30 21:11:40.341 | ERROR    | __main__:get_udouala:90 - Access error to https://www.univ-douala.cm/: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=124.0.6367.201)
+Stacktrace:
+#0 0x5aab3800ddc3 <unknown>
+#1 0x5aab37cfc4e7 <unknown>
+#2 0x5aab37cd2b7e <unknown>
+#3 0x5aab37d7170d <unknown>
+#4 0x5aab37d875b6 <unknown>
+#5 0x5aab37d691f3 <unknown>
+#6 0x5aab37d3a28a <unknown>
+#7 0x5aab37d3ac5e <unknown>
+#8 0x5aab37fd20eb <unknown>
+#9 0x5aab37fd603b <unknown>
+#10 0x5aab37fbe201 <unknown>
+#11 0x5aab37fd6ba2 <unknown>
+#12 0x5aab37fa30bf <unknown>
+#13 0x5aab37ffcf18 <unknown>
+#14 0x5aab37ffd0f0 <unknown>
+#15 0x5aab3800cf14 <unknown>
+#16 0x72b40f694ac3 <unknown>
+
+2024-05-31 08:39:27.219 | ERROR    | __main__:get_udouala:88 - Access error to https://www.univ-douala.cm/: Message: unknown error: net::ERR_NAME_NOT_RESOLVED
+  (Session info: chrome=124.0.6367.201)
+Stacktrace:
+#0 0x60a14f23fdc3 <unknown>
+#1 0x60a14ef2e4e7 <unknown>
+#2 0x60a14ef267e9 <unknown>
+#3 0x60a14ef167c2 <unknown>
+#4 0x60a14ef17db1 <unknown>
+#5 0x60a14ef16b2e <unknown>
+#6 0x60a14ef16251 <unknown>
+#7 0x60a14ef160d3 <unknown>
+#8 0x60a14ef1405c <unknown>
+#9 0x60a14ef1457a <unknown>
+#10 0x60a14ef30e6f <unknown>
+#11 0x60a14efba7e5 <unknown>
+#12 0x60a14ef9b452 <unknown>
+#13 0x60a14efb9c29 <unknown>
+#14 0x60a14ef9b1f3 <unknown>
+#15 0x60a14ef6c28a <unknown>
+#16 0x60a14ef6cc5e <unknown>
+#17 0x60a14f2040eb <unknown>
+#18 0x60a14f20803b <unknown>
+#19 0x60a14f1f0201 <unknown>
+#20 0x60a14f208ba2 <unknown>
+#21 0x60a14f1d50bf <unknown>
+#22 0x60a14f22ef18 <unknown>
+#23 0x60a14f22f0f0 <unknown>
+#24 0x60a14f23ef14 <unknown>
+#25 0x706165c94ac3 <unknown>
+
+2024-05-31 08:41:25.207 | ERROR    | __main__:get_udouala:88 - Access error to https://www.univ-douala.cm/: Message: unknown error: net::ERR_NAME_NOT_RESOLVED
+  (Session info: chrome=124.0.6367.201)
+Stacktrace:
+#0 0x57ae609a7dc3 <unknown>
+#1 0x57ae606964e7 <unknown>
+#2 0x57ae6068e7e9 <unknown>
+#3 0x57ae6067e7c2 <unknown>
+#4 0x57ae6067fdb1 <unknown>
+#5 0x57ae6067eb2e <unknown>
+#6 0x57ae6067e251 <unknown>
+#7 0x57ae6067e0d3 <unknown>
+#8 0x57ae6067c05c <unknown>
+#9 0x57ae6067c57a <unknown>
+#10 0x57ae60698e6f <unknown>
+#11 0x57ae607227e5 <unknown>
+#12 0x57ae60703452 <unknown>
+#13 0x57ae60721c29 <unknown>
+#14 0x57ae607031f3 <unknown>
+#15 0x57ae606d428a <unknown>
+#16 0x57ae606d4c5e <unknown>
+#17 0x57ae6096c0eb <unknown>
+#18 0x57ae6097003b <unknown>
+#19 0x57ae60958201 <unknown>
+#20 0x57ae60970ba2 <unknown>
+#21 0x57ae6093d0bf <unknown>
+#22 0x57ae60996f18 <unknown>
+#23 0x57ae609970f0 <unknown>
+#24 0x57ae609a6f14 <unknown>
+#25 0x7f87a1494ac3 <unknown>
+
+2024-05-31 08:42:26.460 | ERROR    | __main__:get_udouala:88 - Access error to https://www.univ-douala.cm/: Message: unknown error: net::ERR_NAME_NOT_RESOLVED
+  (Session info: chrome=124.0.6367.201)
+Stacktrace:
+#0 0x6034fa9c6dc3 <unknown>
+#1 0x6034fa6b54e7 <unknown>
+#2 0x6034fa6ad7e9 <unknown>
+#3 0x6034fa69d7c2 <unknown>
+#4 0x6034fa69edb1 <unknown>
+#5 0x6034fa69db2e <unknown>
+#6 0x6034fa69d251 <unknown>
+#7 0x6034fa69d0d3 <unknown>
+#8 0x6034fa69b05c <unknown>
+#9 0x6034fa69b57a <unknown>
+#10 0x6034fa6b7e6f <unknown>
+#11 0x6034fa7417e5 <unknown>
+#12 0x6034fa722452 <unknown>
+#13 0x6034fa740c29 <unknown>
+#14 0x6034fa7221f3 <unknown>
+#15 0x6034fa6f328a <unknown>
+#16 0x6034fa6f3c5e <unknown>
+#17 0x6034fa98b0eb <unknown>
+#18 0x6034fa98f03b <unknown>
+#19 0x6034fa977201 <unknown>
+#20 0x6034fa98fba2 <unknown>
+#21 0x6034fa95c0bf <unknown>
+#22 0x6034fa9b5f18 <unknown>
+#23 0x6034fa9b60f0 <unknown>
+#24 0x6034fa9c5f14 <unknown>
+#25 0x71b71e694ac3 <unknown>
+
+2024-05-31 08:43:09.220 | ERROR    | __main__:get_udouala:88 - Access error to https://www.univ-douala.cm/: Message: unknown error: net::ERR_NAME_NOT_RESOLVED
+  (Session info: chrome=124.0.6367.201)
+Stacktrace:
+#0 0x5ecbc6d5cdc3 <unknown>
+#1 0x5ecbc6a4b4e7 <unknown>
+#2 0x5ecbc6a437e9 <unknown>
+#3 0x5ecbc6a337c2 <unknown>
+#4 0x5ecbc6a34db1 <unknown>
+#5 0x5ecbc6a33b2e <unknown>
+#6 0x5ecbc6a33251 <unknown>
+#7 0x5ecbc6a330d3 <unknown>
+#8 0x5ecbc6a3105c <unknown>
+#9 0x5ecbc6a3157a <unknown>
+#10 0x5ecbc6a4de6f <unknown>
+#11 0x5ecbc6ad77e5 <unknown>
+#12 0x5ecbc6ab8452 <unknown>
+#13 0x5ecbc6ad6c29 <unknown>
+#14 0x5ecbc6ab81f3 <unknown>
+#15 0x5ecbc6a8928a <unknown>
+#16 0x5ecbc6a89c5e <unknown>
+#17 0x5ecbc6d210eb <unknown>
+#18 0x5ecbc6d2503b <unknown>
+#19 0x5ecbc6d0d201 <unknown>
+#20 0x5ecbc6d25ba2 <unknown>
+#21 0x5ecbc6cf20bf <unknown>
+#22 0x5ecbc6d4bf18 <unknown>
+#23 0x5ecbc6d4c0f0 <unknown>
+#24 0x5ecbc6d5bf14 <unknown>
+#25 0x7ee5b2a94ac3 <unknown>
+
+2024-05-31 08:57:45.740 | ERROR    | __main__:get_yaounde1:48 - Access error to https://www.uy1.uninet.cm/: Message: unknown error: net::ERR_NAME_NOT_RESOLVED
+  (Session info: chrome=124.0.6367.201)
+Stacktrace:
+#0 0x5925b201bdc3 <unknown>
+#1 0x5925b1d0a4e7 <unknown>
+#2 0x5925b1d027e9 <unknown>
+#3 0x5925b1cf27c2 <unknown>
+#4 0x5925b1cf3db1 <unknown>
+#5 0x5925b1cf2b2e <unknown>
+#6 0x5925b1cf2251 <unknown>
+#7 0x5925b1cf20d3 <unknown>
+#8 0x5925b1cf005c <unknown>
+#9 0x5925b1cf057a <unknown>
+#10 0x5925b1d0ce6f <unknown>
+#11 0x5925b1d967e5 <unknown>
+#12 0x5925b1d77452 <unknown>
+#13 0x5925b1d95c29 <unknown>
+#14 0x5925b1d771f3 <unknown>
+#15 0x5925b1d4828a <unknown>
+#16 0x5925b1d48c5e <unknown>
+#17 0x5925b1fe00eb <unknown>
+#18 0x5925b1fe403b <unknown>
+#19 0x5925b1fcc201 <unknown>
+#20 0x5925b1fe4ba2 <unknown>
+#21 0x5925b1fb10bf <unknown>
+#22 0x5925b200af18 <unknown>
+#23 0x5925b200b0f0 <unknown>
+#24 0x5925b201af14 <unknown>
+#25 0x7f6364494ac3 <unknown>
+
+2024-05-31 09:04:15.073 | ERROR    | __main__:get_udouala:93 - Access error to https://www.univ-douala.cm/: Message: unknown error: net::ERR_NAME_NOT_RESOLVED
+  (Session info: chrome=124.0.6367.201)
+Stacktrace:
+#0 0x5c1362236dc3 <unknown>
+#1 0x5c1361f254e7 <unknown>
+#2 0x5c1361f1d7e9 <unknown>
+#3 0x5c1361f0d7c2 <unknown>
+#4 0x5c1361f0edb1 <unknown>
+#5 0x5c1361f0db2e <unknown>
+#6 0x5c1361f0d251 <unknown>
+#7 0x5c1361f0d0d3 <unknown>
+#8 0x5c1361f0b05c <unknown>
+#9 0x5c1361f0b57a <unknown>
+#10 0x5c1361f27e6f <unknown>
+#11 0x5c1361fb17e5 <unknown>
+#12 0x5c1361f92452 <unknown>
+#13 0x5c1361fb0c29 <unknown>
+#14 0x5c1361f921f3 <unknown>
+#15 0x5c1361f6328a <unknown>
+#16 0x5c1361f63c5e <unknown>
+#17 0x5c13621fb0eb <unknown>
+#18 0x5c13621ff03b <unknown>
+#19 0x5c13621e7201 <unknown>
+#20 0x5c13621ffba2 <unknown>
+#21 0x5c13621cc0bf <unknown>
+#22 0x5c1362225f18 <unknown>
+#23 0x5c13622260f0 <unknown>
+#24 0x5c1362235f14 <unknown>
+#25 0x7fa442694ac3 <unknown>
+
+2024-05-31 11:03:50.967 | ERROR    | __main__:get_yaounde2:158 - Access error to http://www.univ-yaounde2.org/: Message: 
+Stacktrace:
+#0 0x55fd6a4e6dc3 <unknown>
+#1 0x55fd6a1d54e7 <unknown>
+#2 0x55fd6a22035d <unknown>
+#3 0x55fd6a220411 <unknown>
+#4 0x55fd6a263774 <unknown>
+#5 0x55fd6a24247d <unknown>
+#6 0x55fd6a260c29 <unknown>
+#7 0x55fd6a2421f3 <unknown>
+#8 0x55fd6a21328a <unknown>
+#9 0x55fd6a213c5e <unknown>
+#10 0x55fd6a4ab0eb <unknown>
+#11 0x55fd6a4af03b <unknown>
+#12 0x55fd6a497201 <unknown>
+#13 0x55fd6a4afba2 <unknown>
+#14 0x55fd6a47c0bf <unknown>
+#15 0x55fd6a4d5f18 <unknown>
+#16 0x55fd6a4d60f0 <unknown>
+#17 0x55fd6a4e5f14 <unknown>
+#18 0x7ff16e894ac3 <unknown>
+
+2024-05-31 11:05:53.188 | ERROR    | __main__:get_yaounde2:158 - Access error to http://www.univ-yaounde2.org/: Message: 
+Stacktrace:
+#0 0x5f04f5009dc3 <unknown>
+#1 0x5f04f4cf84e7 <unknown>
+#2 0x5f04f4d4335d <unknown>
+#3 0x5f04f4d43411 <unknown>
+#4 0x5f04f4d86774 <unknown>
+#5 0x5f04f4d6547d <unknown>
+#6 0x5f04f4d83c29 <unknown>
+#7 0x5f04f4d651f3 <unknown>
+#8 0x5f04f4d3628a <unknown>
+#9 0x5f04f4d36c5e <unknown>
+#10 0x5f04f4fce0eb <unknown>
+#11 0x5f04f4fd203b <unknown>
+#12 0x5f04f4fba201 <unknown>
+#13 0x5f04f4fd2ba2 <unknown>
+#14 0x5f04f4f9f0bf <unknown>
+#15 0x5f04f4ff8f18 <unknown>
+#16 0x5f04f4ff90f0 <unknown>
+#17 0x5f04f5008f14 <unknown>
+#18 0x75f4db494ac3 <unknown>
+
+2024-05-31 11:14:42.232 | ERROR    | __main__:get_yaounde2:158 - Access error to http://www.univ-yaounde2.org/: Message: 
+Stacktrace:
+#0 0x6101fee58dc3 <unknown>
+#1 0x6101feb474e7 <unknown>
+#2 0x6101feb9235d <unknown>
+#3 0x6101feb92411 <unknown>
+#4 0x6101febd5774 <unknown>
+#5 0x6101febb447d <unknown>
+#6 0x6101febd2c29 <unknown>
+#7 0x6101febb41f3 <unknown>
+#8 0x6101feb8528a <unknown>
+#9 0x6101feb85c5e <unknown>
+#10 0x6101fee1d0eb <unknown>
+#11 0x6101fee2103b <unknown>
+#12 0x6101fee09201 <unknown>
+#13 0x6101fee21ba2 <unknown>
+#14 0x6101fedee0bf <unknown>
+#15 0x6101fee47f18 <unknown>
+#16 0x6101fee480f0 <unknown>
+#17 0x6101fee57f14 <unknown>
+#18 0x7f2033294ac3 <unknown>
+
+2024-05-31 11:19:23.011 | ERROR    | __main__:get_yaounde2:158 - Access error to http://www.univ-yaounde2.org/: Message: 
+Stacktrace:
+#0 0x56d770651dc3 <unknown>
+#1 0x56d7703404e7 <unknown>
+#2 0x56d77038b35d <unknown>
+#3 0x56d77038b411 <unknown>
+#4 0x56d7703ce774 <unknown>
+#5 0x56d7703ad47d <unknown>
+#6 0x56d7703cbc29 <unknown>
+#7 0x56d7703ad1f3 <unknown>
+#8 0x56d77037e28a <unknown>
+#9 0x56d77037ec5e <unknown>
+#10 0x56d7706160eb <unknown>
+#11 0x56d77061a03b <unknown>
+#12 0x56d770602201 <unknown>
+#13 0x56d77061aba2 <unknown>
+#14 0x56d7705e70bf <unknown>
+#15 0x56d770640f18 <unknown>
+#16 0x56d7706410f0 <unknown>
+#17 0x56d770650f14 <unknown>
+#18 0x760d78e94ac3 <unknown>
+
+2024-05-31 11:23:12.395 | ERROR    | __main__:get_yaounde2:158 - Access error to http://www.univ-yaounde2.org/: Message: 
+Stacktrace:
+#0 0x5986a2028dc3 <unknown>
+#1 0x5986a1d174e7 <unknown>
+#2 0x5986a1d6235d <unknown>
+#3 0x5986a1d62411 <unknown>
+#4 0x5986a1da5774 <unknown>
+#5 0x5986a1d8447d <unknown>
+#6 0x5986a1da2c29 <unknown>
+#7 0x5986a1d841f3 <unknown>
+#8 0x5986a1d5528a <unknown>
+#9 0x5986a1d55c5e <unknown>
+#10 0x5986a1fed0eb <unknown>
+#11 0x5986a1ff103b <unknown>
+#12 0x5986a1fd9201 <unknown>
+#13 0x5986a1ff1ba2 <unknown>
+#14 0x5986a1fbe0bf <unknown>
+#15 0x5986a2017f18 <unknown>
+#16 0x5986a20180f0 <unknown>
+#17 0x5986a2027f14 <unknown>
+#18 0x7ed383094ac3 <unknown>
+
+2024-05-31 13:16:19.549 | ERROR    | __main__:get_ubertoua:197 - Access error to https://www.univ-bertoua.cm: Message: javascript error: {"status":32,"value":"The result of the xpath expression \"//*[@id=\"footer\"]/div[2]/div/div/div[2]/p/text()[1]\" is: [object Text]. It should be an element."}
+  (Session info: chrome=124.0.6367.201)
+Stacktrace:
+#0 0x56a5040b0dc3 <unknown>
+#1 0x56a503d9f4e7 <unknown>
+#2 0x56a503da4a9c <unknown>
+#3 0x56a503da67ef <unknown>
+#4 0x56a503da687c <unknown>
+#5 0x56a503dea068 <unknown>
+#6 0x56a503dea411 <unknown>
+#7 0x56a503e2d774 <unknown>
+#8 0x56a503e0c47d <unknown>
+#9 0x56a503e2ac29 <unknown>
+#10 0x56a503e0c1f3 <unknown>
+#11 0x56a503ddd28a <unknown>
+#12 0x56a503dddc5e <unknown>
+#13 0x56a5040750eb <unknown>
+#14 0x56a50407903b <unknown>
+#15 0x56a504061201 <unknown>
+#16 0x56a504079ba2 <unknown>
+#17 0x56a5040460bf <unknown>
+#18 0x56a50409ff18 <unknown>
+#19 0x56a5040a00f0 <unknown>
+#20 0x56a5040aff14 <unknown>
+#21 0x7e08b3a94ac3 <unknown>
+
+2024-05-31 13:35:12.100 | ERROR    | __main__:get_ugaroua:204 - Access error to https://univ-garoua.cm: Message: unknown error: net::ERR_NAME_NOT_RESOLVED
+  (Session info: chrome=124.0.6367.201)
+Stacktrace:
+#0 0x5d0664f7ddc3 <unknown>
+#1 0x5d0664c6c4e7 <unknown>
+#2 0x5d0664c647e9 <unknown>
+#3 0x5d0664c547c2 <unknown>
+#4 0x5d0664c55db1 <unknown>
+#5 0x5d0664c54b2e <unknown>
+#6 0x5d0664c54251 <unknown>
+#7 0x5d0664c540d3 <unknown>
+#8 0x5d0664c5205c <unknown>
+#9 0x5d0664c5257a <unknown>
+#10 0x5d0664c6ee6f <unknown>
+#11 0x5d0664cf87e5 <unknown>
+#12 0x5d0664cd9452 <unknown>
+#13 0x5d0664cf7c29 <unknown>
+#14 0x5d0664cd91f3 <unknown>
+#15 0x5d0664caa28a <unknown>
+#16 0x5d0664caac5e <unknown>
+#17 0x5d0664f420eb <unknown>
+#18 0x5d0664f4603b <unknown>
+#19 0x5d0664f2e201 <unknown>
+#20 0x5d0664f46ba2 <unknown>
+#21 0x5d0664f130bf <unknown>
+#22 0x5d0664f6cf18 <unknown>
+#23 0x5d0664f6d0f0 <unknown>
+#24 0x5d0664f7cf14 <unknown>
+#25 0x769982e94ac3 <unknown>
+
+2024-05-31 14:39:33.579 | ERROR    | __main__:get_umarou:247 - Access error to http://www.univ-maroua.cm: Message: 
+Stacktrace:
+#0 0x55c0cb76ddc3 <unknown>
+#1 0x55c0cb45c4e7 <unknown>
+#2 0x55c0cb4a735d <unknown>
+#3 0x55c0cb4a7411 <unknown>
+#4 0x55c0cb4ea774 <unknown>
+#5 0x55c0cb4c947d <unknown>
+#6 0x55c0cb4e7c29 <unknown>
+#7 0x55c0cb4c91f3 <unknown>
+#8 0x55c0cb49a28a <unknown>
+#9 0x55c0cb49ac5e <unknown>
+#10 0x55c0cb7320eb <unknown>
+#11 0x55c0cb73603b <unknown>
+#12 0x55c0cb71e201 <unknown>
+#13 0x55c0cb736ba2 <unknown>
+#14 0x55c0cb7030bf <unknown>
+#15 0x55c0cb75cf18 <unknown>
+#16 0x55c0cb75d0f0 <unknown>
+#17 0x55c0cb76cf14 <unknown>
+#18 0x79e3f6c94ac3 <unknown>
+
+2024-05-31 15:02:22.919 | ERROR    | __main__:get_umarou:281 - Access error to http://www.univ-maroua.cm: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=124.0.6367.201)
+Stacktrace:
+#0 0x610f70302dc3 <unknown>
+#1 0x610f6fff14e7 <unknown>
+#2 0x610f6ffc7b7e <unknown>
+#3 0x610f7006670d <unknown>
+#4 0x610f7007c5b6 <unknown>
+#5 0x610f7005e1f3 <unknown>
+#6 0x610f7002f28a <unknown>
+#7 0x610f7002fc5e <unknown>
+#8 0x610f702c70eb <unknown>
+#9 0x610f702cb03b <unknown>
+#10 0x610f702b3201 <unknown>
+#11 0x610f702cbba2 <unknown>
+#12 0x610f702980bf <unknown>
+#13 0x610f702f1f18 <unknown>
+#14 0x610f702f20f0 <unknown>
+#15 0x610f70301f14 <unknown>
+#16 0x79e647894ac3 <unknown>
+
+2024-05-31 18:02:44.893 | ERROR    | __main__:get_ubamenda:188 - Access error to https://uniba.cm/: Message: 
+Stacktrace:
+#0 0x572d8429ddc3 <unknown>
+#1 0x572d83f8c4e7 <unknown>
+#2 0x572d83fd735d <unknown>
+#3 0x572d83fd7411 <unknown>
+#4 0x572d8401a774 <unknown>
+#5 0x572d83ff947d <unknown>
+#6 0x572d84017c29 <unknown>
+#7 0x572d83ff91f3 <unknown>
+#8 0x572d83fca28a <unknown>
+#9 0x572d83fcac5e <unknown>
+#10 0x572d842620eb <unknown>
+#11 0x572d8426603b <unknown>
+#12 0x572d8424e201 <unknown>
+#13 0x572d84266ba2 <unknown>
+#14 0x572d842330bf <unknown>
+#15 0x572d8428cf18 <unknown>
+#16 0x572d8428d0f0 <unknown>
+#17 0x572d8429cf14 <unknown>
+#18 0x7253f2e94ac3 <unknown>
+
+2024-05-31 18:11:52.329 | ERROR    | __main__:get_ubamenda:188 - Access error to https://uniba.cm/: Message: timeout: Timed out receiving message from renderer: -0.036
+  (Session info: chrome=124.0.6367.201)
+Stacktrace:
+#0 0x62cf67b13dc3 <unknown>
+#1 0x62cf678024e7 <unknown>
+#2 0x62cf677ea3bd <unknown>
+#3 0x62cf677ea0d3 <unknown>
+#4 0x62cf677e805c <unknown>
+#5 0x62cf677e86ef <unknown>
+#6 0x62cf677f8c81 <unknown>
+#7 0x62cf6780e26e <unknown>
+#8 0x62cf6781387b <unknown>
+#9 0x62cf677e8e32 <unknown>
+#10 0x62cf6780dfe5 <unknown>
+#11 0x62cf6788daf2 <unknown>
+#12 0x62cf6786f1f3 <unknown>
+#13 0x62cf6784028a <unknown>
+#14 0x62cf67840c5e <unknown>
+#15 0x62cf67ad80eb <unknown>
+#16 0x62cf67adc03b <unknown>
+#17 0x62cf67ac4201 <unknown>
+#18 0x62cf67adcba2 <unknown>
+#19 0x62cf67aa90bf <unknown>
+#20 0x62cf67b02f18 <unknown>
+#21 0x62cf67b030f0 <unknown>
+#22 0x62cf67b12f14 <unknown>
+#23 0x79d257094ac3 <unknown>
+
+2024-05-31 18:30:12.869 | ERROR    | __main__:get_ubamenda:188 - Access error to https://uniba.cm/: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=124.0.6367.201)
+Stacktrace:
+#0 0x6116e3fa6dc3 <unknown>
+#1 0x6116e3c954e7 <unknown>
+#2 0x6116e3c6bb7e <unknown>
+#3 0x6116e3d0a70d <unknown>
+#4 0x6116e3d205b6 <unknown>
+#5 0x6116e3d021f3 <unknown>
+#6 0x6116e3cd328a <unknown>
+#7 0x6116e3cd3c5e <unknown>
+#8 0x6116e3f6b0eb <unknown>
+#9 0x6116e3f6f03b <unknown>
+#10 0x6116e3f57201 <unknown>
+#11 0x6116e3f6fba2 <unknown>
+#12 0x6116e3f3c0bf <unknown>
+#13 0x6116e3f95f18 <unknown>
+#14 0x6116e3f960f0 <unknown>
+#15 0x6116e3fa5f14 <unknown>
+#16 0x7e3126494ac3 <unknown>
+
+2024-05-31 18:31:40.751 | ERROR    | __main__:get_list_university_website:66 - error to fetch the website link of 'Création de Université d'Ebolowa': 'NoneType' object has no attribute 'find_all'

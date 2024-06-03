@@ -1,4 +1,5 @@
 import sys
+import time
 
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
@@ -22,7 +23,7 @@ class Univers:
         chrome_options.add_experimental_option("detach", True)
         chrome_options.add_argument("--start-maximized")
         self.driver = webdriver.Chrome(options=chrome_options)
-        self.wait = WebDriverWait(self.driver, 3)
+        self.wait = WebDriverWait(self.driver, 10)
 
     def get_yaounde1(self):
         url = "https://www.uy1.uninet.cm/"
@@ -30,21 +31,167 @@ class Univers:
             self.driver.get(url)
             name = self.wait.until(
                 ec.presence_of_element_located((By.XPATH, '//*[@id="masthead"]/div[2]/div/div/div[1]/div/a/img')))
-
             name_text = name.get_attribute('alt')
             self.wait.until(ec.element_to_be_clickable((By.XPATH, '//*[@id="menu-item-11283"]/a'))).click()
-            f_path = '//*[@id="content"]/div/div/div[1]/div/div/div/div/div/div[2]/div/div[1]/ul'
-            faculty_element = self.wait.until(ec.presence_of_element_located((By.XPATH, f_path)))
-            faculty_tag = faculty_element.find_elements(By.TAG_NAME, 'li')
-            faculty_list = []
-            faculty_link = []
-            for i in faculty_tag:
-                link = i.find_element(By.TAG_NAME, 'a').get_attribute('href')
-                faculty_link.append(link)
-                faculty_list.append(i.text)
-            faculty_name_link = list(zip(faculty_list, faculty_link))
-            logger.info(f"l'{name_text} compte {len(faculty_list)} "
-                        f"facultes et formations la list: {faculty_name_link} et son lien est:{url}")
+
+            # get the list of faculty and urls
+            try:
+                f_path = '//*[@id="content"]/div/div/div[1]/div/div/div/div/div/div[2]/div/div[1]/ul'
+                faculty_element = self.wait.until(ec.presence_of_element_located((By.XPATH, f_path)))
+                faculty_tag = faculty_element.find_elements(By.TAG_NAME, 'li')
+                faculty_list = []
+                faculty_link = []
+                for i in faculty_tag:
+                    link = i.find_element(By.TAG_NAME, 'a').get_attribute('href')
+                    faculty_link.append(link)
+                    faculty_list.append(i.text)
+                faculty_name_link = list(zip(faculty_list, faculty_link))
+                logger.info(f"l'{name_text} compte {len(faculty_list)} "
+                            f"facultes et formations la list: {faculty_name_link} et son lien est:{url}")
+            except Exception as e:
+                logger.error(f'something went wrong to fetch the list of college {url}: {e}')
+
+            try:
+                f_path = '//*[@id="content"]/div/div/div[1]/div/div/div/div/div/div[2]/div/div[1]/ul/li[1]'
+                name_1 = self.wait.until(ec.presence_of_element_located((By.XPATH, f_path)))
+                name_1.click()
+                school_name = name_1.text
+                fs_link = name_1.find_element(By.TAG_NAME, 'a').get_attribute('href')
+                falsh_depart = name_1.find_element(By.XPATH,
+                                                   '//*[@id="falsh"]/div[2]/div[10]/div[2]/div/div/div[3]/div/ul')
+                elements = falsh_depart.find_elements(By.TAG_NAME, 'li')
+                falsh_depart_list = []
+                falsh_depart_link = []
+                time.sleep(3)
+                for element in elements:
+                    dep = element.find_element(By.TAG_NAME, 'strong').find_element(By.TAG_NAME, 'a')
+                    falsh_depart_link.append(dep.get_attribute('href'))
+                    falsh_depart_list.append(dep.text)
+                falsh_depart_list_link = list(zip(falsh_depart_list, falsh_depart_link))
+
+                logger.info(f" The {school_name} count {len(falsh_depart_list_link)} "
+                            f"Departments the list: {falsh_depart_list_link} and its link:{fs_link}")
+
+            except Exception as e:
+                logger.error(f'Something went wrong to scrape the F.A.L.S.H of {url}: {e}')
+            #
+            try:
+                fs_path = '//*[@id="content"]/div/div/div[1]/div/div/div/div/div/div[2]/div/div[1]/ul/li[2]'
+                fs_button = self.wait.until(ec.element_to_be_clickable((By.XPATH, fs_path)))
+                fs_button.click()
+                fs_name = fs_button.text
+                fs_link = fs_button.find_element(By.TAG_NAME, 'a').get_attribute('href')
+                ul_path = '//*[@id="facsciences"]/div[2]/div[10]/div[2]/div/div/div[3]/div/ul'
+                fs_ul = self.wait.until(ec.presence_of_element_located((By.XPATH, ul_path)))
+                elements = fs_ul.find_elements(By.TAG_NAME, 'li')
+                fs_depart_list = []
+                fs_depart_link = []
+                time.sleep(3)
+                for element in elements:
+                    fs_dep = element.find_element(By.TAG_NAME, 'strong').find_element(By.TAG_NAME, 'a')
+                    fs_depart_list.append(fs_dep.text)
+                    fs_depart_link.append(fs_dep.get_attribute('href'))
+                fs_depart_list_link = list(zip(fs_depart_list, fs_depart_link))
+                logger.info(f" The {fs_name} count {len(fs_depart_list_link)} "
+                            f"Departments the list: {fs_depart_list_link} and its link:{fs_link}")
+
+            except Exception as er:
+                logger.error(f'Something went wrong to scrape the FS of {url}: {er}')
+
+            try:
+                fse_button = self.wait.until(ec.element_to_be_clickable(
+                    (By.XPATH, '//*[@id="content"]/div/div/div[1]/div/div/div/div/div/div[2]/div/div[1]/ul/li[3]')))
+
+                fse_button.click()
+                fse_name = fse_button.text
+                fse_link = fse_button.find_element(By.TAG_NAME, 'a').get_attribute('href')
+                fs_ul = self.wait.until(ec.presence_of_element_located(
+                    (By.XPATH, '//*[@id="fse"]/div[2]/div[10]/div[2]/div/div/div[3]/div/ul')))
+
+                elements = fs_ul.find_elements(By.TAG_NAME, 'li')
+                fse_depart_list = []
+                fse_depart_link = []
+                time.sleep(3)
+                for element in elements:
+                    fs_dep = element.find_element(By.TAG_NAME, 'strong').find_element(By.TAG_NAME, 'a')
+                    fse_depart_list.append(fs_dep.text)
+                    fse_depart_link.append(fs_dep.get_attribute('href'))
+                fse_depart_list_link = list(zip(fse_depart_list, fse_depart_link))
+                logger.info(f" The {fse_name} count {len(fse_depart_list_link)} "
+                            f"Departments the list: {fse_depart_list_link} and its link:{fse_link}")
+
+            except Exception as er:
+                logger.error(f'Something went wrong to scrape the FSE of {url}: {er}')
+
+            try:
+                ens_button = self.wait.until(ec.element_to_be_clickable(
+                    (By.XPATH, '//*[@id="content"]/div/div/div[1]/div/div/div/div/div/div[2]/div/div[1]/ul/li[5]')))
+
+                ens_button.click()
+                ens_name = ens_button.text
+                ens_link = ens_button.find_element(By.TAG_NAME, 'a').get_attribute('href')
+                ens_ul = self.wait.until(ec.presence_of_element_located(
+                    (By.XPATH, '//*[@id="ens"]/div[2]/div[10]/div[2]/div/div/div[3]/div/ul')))
+
+                elements = ens_ul.find_elements(By.TAG_NAME, 'li')
+                ens_depart_list = []
+                time.sleep(3)
+                for element in elements:
+                    ens_dep = element.find_element(By.TAG_NAME, 'strong')
+                    if ens_dep:
+                        ens_depart_list.append(ens_dep.text)
+                logger.info(f" The {ens_name} count {len(ens_depart_list)} "
+                            f"Departments the list: {ens_depart_list} and its link:{ens_link}")
+            except Exception as er:
+                logger.error(f'Something went wrong to scrape the ENS of {url}: {er}')
+
+            try:
+                ptch_button = self.wait.until(ec.element_to_be_clickable(
+                    (By.XPATH, '//*[@id="content"]/div/div/div[1]/div/div/div/div/div/div[2]/div/div[1]/ul/li[6]')))
+                ptch_button.click()
+                ptch_name = ptch_button.text
+                ptch_link = ptch_button.find_element(By.TAG_NAME, 'a').get_attribute('href')
+                ptch_ul = self.wait.until(ec.presence_of_element_located(
+                    (By.XPATH, '//*[@id="ensp"]/div[2]/div[14]/div/ul[1]')))
+
+                elements = ptch_ul.find_elements(By.TAG_NAME, 'li')
+                ptch_depart_list = []
+                time.sleep(3)
+                for element in elements:
+                    ens_dep = element.find_element(By.TAG_NAME, 'strong')
+                    if ens_dep:
+                        ptch_depart_list.append(ens_dep.text.replace(' ;', ''))
+                logger.info(f" The {ptch_name} count {len(ptch_depart_list)} "
+                            f"Departments the list: {ptch_depart_list} and its link:{ptch_link}")
+
+            except Exception as er:
+                logger.error(f'Something went wrong to scrape the PTCH of {url}: {er}')
+
+            try:
+                ed_button = self.wait.until(ec.element_to_be_clickable(
+                    (By.XPATH, '//*[@id="content"]/div/div/div[1]/div/div/div/div/div/div[2]/div/div[1]/ul/li[8]')))
+
+                ed_button.click()
+                ed_name = ed_button.text
+                ed_link = ed_button.find_element(By.TAG_NAME, 'a').get_attribute('href')
+                ed_ul = self.wait.until(ec.presence_of_element_located(
+                    (By.XPATH, '//*[@id="ecoles-doctorales"]/div[2]/div[4]/div/div')))
+
+                elements = ed_ul.find_elements(By.CSS_SELECTOR, '.wpb_wrapper div p strong')
+                ed_depart_list = []
+                time.sleep(3)
+                for element in elements:
+                    content = element.text
+                    if content.startswith(('1.', '2.', '3.', '4.')):
+                        content = content.replace('1.', '').replace('2.', '').replace('3.', '').replace('4.', '')
+                        ed_depart_list.append(content)
+
+                logger.info(f" The {ed_name} count {len(ed_depart_list)} "        
+                            f"Departments the list: {ed_depart_list} and its link:{ed_link}")
+
+            except Exception as er:
+                logger.error(f'Something went wrong to scrape the ED of {url}: {er}')
+
         except Exception as e:
             logger.error(f'Access error to {url}: {e}')
 
@@ -285,5 +432,4 @@ class Univers:
 
 
 yaou = Univers()
-yaou.get_ugaroua()
-yaou.close()
+yaou.get_yaounde1()

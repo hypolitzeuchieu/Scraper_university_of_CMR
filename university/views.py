@@ -56,7 +56,11 @@ class Univers:
                 name_1 = self.wait.until(ec.presence_of_element_located((By.XPATH, f_path)))
                 name_1.click()
                 school_name = name_1.text
-                fs_link = name_1.find_element(By.TAG_NAME, 'a').get_attribute('href')
+                falsh_link = name_1.find_element(By.TAG_NAME, 'a').get_attribute('href')
+                falsh_des_tag = self.wait.until(ec.presence_of_element_located(
+                    (By.XPATH, '//*[@id="falsh"]/div[2]/div[8]/div/p')))
+                falsh_description = falsh_des_tag.text.strip()
+
                 falsh_depart = name_1.find_element(By.XPATH,
                                                    '//*[@id="falsh"]/div[2]/div[10]/div[2]/div/div/div[3]/div/ul')
                 elements = falsh_depart.find_elements(By.TAG_NAME, 'li')
@@ -70,17 +74,20 @@ class Univers:
                 falsh_depart_list_link = list(zip(falsh_depart_list, falsh_depart_link))
 
                 logger.info(f" The {school_name} count {len(falsh_depart_list_link)} "
-                            f"Departments the list: {falsh_depart_list_link} and its link:{fs_link}")
+                            f"Departments the list: {falsh_depart_list_link} and its link:{falsh_link}."
+                            f"\nThe description is: {falsh_description} ")
 
             except Exception as e:
                 logger.error(f'Something went wrong to scrape the F.A.L.S.H of {url}: {e}')
-            #
+
             try:
                 fs_path = '//*[@id="content"]/div/div/div[1]/div/div/div/div/div/div[2]/div/div[1]/ul/li[2]'
                 fs_button = self.wait.until(ec.element_to_be_clickable((By.XPATH, fs_path)))
                 fs_button.click()
                 fs_name = fs_button.text
                 fs_link = fs_button.find_element(By.TAG_NAME, 'a').get_attribute('href')
+                fs_des_tag = self.wait.until(ec.presence_of_element_located((By.XPATH, '//*[@id="facsciences"]/div[2]/div[8]/div/p')))
+                fs_description = fs_des_tag.text.strip()
                 ul_path = '//*[@id="facsciences"]/div[2]/div[10]/div[2]/div/div/div[3]/div/ul'
                 fs_ul = self.wait.until(ec.presence_of_element_located((By.XPATH, ul_path)))
                 elements = fs_ul.find_elements(By.TAG_NAME, 'li')
@@ -93,7 +100,8 @@ class Univers:
                     fs_depart_link.append(fs_dep.get_attribute('href'))
                 fs_depart_list_link = list(zip(fs_depart_list, fs_depart_link))
                 logger.info(f" The {fs_name} count {len(fs_depart_list_link)} "
-                            f"Departments the list: {fs_depart_list_link} and its link:{fs_link}")
+                            f"Departments the list: {fs_depart_list_link} and its link:{fs_link}."
+                            f"\n The description is: {fs_description}")
 
             except Exception as er:
                 logger.error(f'Something went wrong to scrape the FS of {url}: {er}')
@@ -105,6 +113,9 @@ class Univers:
                 fse_button.click()
                 fse_name = fse_button.text
                 fse_link = fse_button.find_element(By.TAG_NAME, 'a').get_attribute('href')
+                fse_des_tag = self.wait.until(ec.presence_of_element_located((By.XPATH,
+                                                                              '//*[@id="fse"]/div[2]/div[8]/div/p')))
+                fse_description = fse_des_tag.text.strip()
                 fs_ul = self.wait.until(ec.presence_of_element_located(
                     (By.XPATH, '//*[@id="fse"]/div[2]/div[10]/div[2]/div/div/div[3]/div/ul')))
 
@@ -118,10 +129,23 @@ class Univers:
                     fse_depart_link.append(fs_dep.get_attribute('href'))
                 fse_depart_list_link = list(zip(fse_depart_list, fse_depart_link))
                 logger.info(f" The {fse_name} count {len(fse_depart_list_link)} "
-                            f"Departments the list: {fse_depart_list_link} and its link:{fse_link}")
+                            f"Departments the list: {fse_depart_list_link} and its link:{fse_link}."
+                            f"\n The descriptin is: {fse_description}")
 
             except Exception as er:
                 logger.error(f'Something went wrong to scrape the FSE of {url}: {er}')
+            try:
+                fmsp_button = self.wait.until(ec.element_to_be_clickable(
+                    (By.XPATH, '//*[@id="content"]/div/div/div[1]/div/div/div/div/div/div[2]/div/div[1]/ul/li[4]')))
+                fmsp_button.click()
+                fmsp_name = fmsp_button.text
+                fmsp_link = fmsp_button.find_element(By.TAG_NAME, 'a').get_attribute('href')
+                fmsp_des_tag = self.wait.until(ec.presence_of_element_located(
+                    (By.XPATH, '//*[@id="fmsb"]/div[2]/div[10]/div')))
+                fmsp_description = fmsp_des_tag.text.strip()
+                logger.info(f"The description of {fmsp_name} is: {fmsp_description}.Its link:{fmsp_link}")
+            except Exception as er:
+                logger.error(f'Something went wrong to scrape the ENS of {url}: {er}')
 
             try:
                 ens_button = self.wait.until(ec.element_to_be_clickable(
@@ -130,6 +154,9 @@ class Univers:
                 ens_button.click()
                 ens_name = ens_button.text
                 ens_link = ens_button.find_element(By.TAG_NAME, 'a').get_attribute('href')
+                ens_des_tag = self.wait.until(ec.presence_of_element_located(
+                    (By.XPATH, '//*[@id="ens"]/div[2]/div[8]/div')))
+                ens_description = ens_des_tag.text.strip()
                 ens_ul = self.wait.until(ec.presence_of_element_located(
                     (By.XPATH, '//*[@id="ens"]/div[2]/div[10]/div[2]/div/div/div[3]/div/ul')))
 
@@ -141,7 +168,8 @@ class Univers:
                     if ens_dep:
                         ens_depart_list.append(ens_dep.text)
                 logger.info(f" The {ens_name} count {len(ens_depart_list)} "
-                            f"Departments the list: {ens_depart_list} and its link:{ens_link}")
+                            f"Departments the list: {ens_depart_list} and its link:{ens_link}.\n "
+                            f"The description is: {ens_description}")
             except Exception as er:
                 logger.error(f'Something went wrong to scrape the ENS of {url}: {er}')
 
@@ -151,6 +179,9 @@ class Univers:
                 ptch_button.click()
                 ptch_name = ptch_button.text
                 ptch_link = ptch_button.find_element(By.TAG_NAME, 'a').get_attribute('href')
+                ptch_des_tag = self.wait.until(ec.presence_of_element_located(
+                    (By.XPATH, '//*[@id="ensp"]/div[2]/div[10]/div')))
+                ptch_description = ptch_des_tag.text.strip()
                 ptch_ul = self.wait.until(ec.presence_of_element_located(
                     (By.XPATH, '//*[@id="ensp"]/div[2]/div[14]/div/ul[1]')))
 
@@ -162,7 +193,8 @@ class Univers:
                     if ens_dep:
                         ptch_depart_list.append(ens_dep.text.replace(' ;', ''))
                 logger.info(f" The {ptch_name} count {len(ptch_depart_list)} "
-                            f"Departments the list: {ptch_depart_list} and its link:{ptch_link}")
+                            f"Departments the list: {ptch_depart_list} and its link:{ptch_link}.\n"
+                            f"The description is: {ptch_description}")
 
             except Exception as er:
                 logger.error(f'Something went wrong to scrape the PTCH of {url}: {er}')
@@ -186,7 +218,7 @@ class Univers:
                         content = content.replace('1.', '').replace('2.', '').replace('3.', '').replace('4.', '')
                         ed_depart_list.append(content)
 
-                logger.info(f" The {ed_name} count {len(ed_depart_list)} "        
+                logger.info(f" The {ed_name} count {len(ed_depart_list)} "
                             f"Departments the list: {ed_depart_list} and its link:{ed_link}")
 
             except Exception as er:

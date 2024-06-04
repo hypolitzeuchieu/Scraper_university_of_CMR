@@ -29,6 +29,8 @@ class Univers:
         url = "https://www.uy1.uninet.cm/"
         try:
             self.driver.get(url)
+            univ_tag = '//*[@id="content"]/div/div/div[4]/div/div/div/div/div/div[2]/div[2]/div/div/div/div/p'
+            university_description = self.wait.until(ec.presence_of_element_located((By.XPATH, univ_tag))).text
             name = self.wait.until(
                 ec.presence_of_element_located((By.XPATH, '//*[@id="masthead"]/div[2]/div/div/div[1]/div/a/img')))
             name_text = name.get_attribute('alt')
@@ -47,7 +49,8 @@ class Univers:
                     faculty_list.append(i.text)
                 faculty_name_link = list(zip(faculty_list, faculty_link))
                 logger.info(f"l'{name_text} compte {len(faculty_list)} "
-                            f"facultes et formations la list: {faculty_name_link} et son lien est:{url}")
+                            f"facultes et formations la list: {faculty_name_link} et son lien est:{url}.\n"
+                            f"The description is: {university_description}")
             except Exception as e:
                 logger.error(f'something went wrong to fetch the list of college {url}: {e}')
 

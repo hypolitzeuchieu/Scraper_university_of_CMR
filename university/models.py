@@ -27,7 +27,6 @@ class College(models.Model):
 class Department(models.Model):
     college = models.ForeignKey(College, on_delete=models.CASCADE)
     name = models.CharField(max_length=200)
-    department_description = models.TextField()
 
     def __str__(self):
         return self.name

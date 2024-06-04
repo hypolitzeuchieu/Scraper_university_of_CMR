@@ -23,7 +23,7 @@ class Univers:
         chrome_options.add_experimental_option("detach", True)
         chrome_options.add_argument("--start-maximized")
         self.driver = webdriver.Chrome(options=chrome_options)
-        self.wait = WebDriverWait(self.driver, 10)
+        self.wait = WebDriverWait(self.driver, 15)
 
     def get_yaounde1(self):
         url = "https://www.uy1.uninet.cm/"
@@ -60,6 +60,7 @@ class Univers:
                 name_1.click()
                 school_name = name_1.text
                 falsh_link = name_1.find_element(By.TAG_NAME, 'a').get_attribute('href')
+                time.sleep(3)
                 falsh_des_tag = self.wait.until(ec.presence_of_element_located(
                     (By.XPATH, '//*[@id="falsh"]/div[2]/div[8]/div/p')))
                 falsh_description = falsh_des_tag.text.strip()
@@ -89,7 +90,9 @@ class Univers:
                 fs_button.click()
                 fs_name = fs_button.text
                 fs_link = fs_button.find_element(By.TAG_NAME, 'a').get_attribute('href')
-                fs_des_tag = self.wait.until(ec.presence_of_element_located((By.XPATH, '//*[@id="facsciences"]/div[2]/div[8]/div/p')))
+                time.sleep(3)
+                fs_des_tag = self.wait.until(ec.presence_of_element_located(
+                    (By.XPATH, '//*[@id="facsciences"]/div[2]/div[8]/div/p')))
                 fs_description = fs_des_tag.text.strip()
                 ul_path = '//*[@id="facsciences"]/div[2]/div[10]/div[2]/div/div/div[3]/div/ul'
                 fs_ul = self.wait.until(ec.presence_of_element_located((By.XPATH, ul_path)))
@@ -116,6 +119,7 @@ class Univers:
                 fse_button.click()
                 fse_name = fse_button.text
                 fse_link = fse_button.find_element(By.TAG_NAME, 'a').get_attribute('href')
+                time.sleep(3)
                 fse_des_tag = self.wait.until(ec.presence_of_element_located((By.XPATH,
                                                                               '//*[@id="fse"]/div[2]/div[8]/div/p')))
                 fse_description = fse_des_tag.text.strip()
@@ -143,12 +147,13 @@ class Univers:
                 fmsp_button.click()
                 fmsp_name = fmsp_button.text
                 fmsp_link = fmsp_button.find_element(By.TAG_NAME, 'a').get_attribute('href')
+                time.sleep(3)
                 fmsp_des_tag = self.wait.until(ec.presence_of_element_located(
                     (By.XPATH, '//*[@id="fmsb"]/div[2]/div[10]/div')))
                 fmsp_description = fmsp_des_tag.text.strip()
                 logger.info(f"The description of {fmsp_name} is: {fmsp_description}.Its link:{fmsp_link}")
             except Exception as er:
-                logger.error(f'Something went wrong to scrape the ENS of {url}: {er}')
+                logger.error(f'Something went wrong to scrape the FMSB of {url}: {er}')
 
             try:
                 ens_button = self.wait.until(ec.element_to_be_clickable(
@@ -157,6 +162,7 @@ class Univers:
                 ens_button.click()
                 ens_name = ens_button.text
                 ens_link = ens_button.find_element(By.TAG_NAME, 'a').get_attribute('href')
+                time.sleep(3)
                 ens_des_tag = self.wait.until(ec.presence_of_element_located(
                     (By.XPATH, '//*[@id="ens"]/div[2]/div[8]/div')))
                 ens_description = ens_des_tag.text.strip()
@@ -182,6 +188,7 @@ class Univers:
                 ptch_button.click()
                 ptch_name = ptch_button.text
                 ptch_link = ptch_button.find_element(By.TAG_NAME, 'a').get_attribute('href')
+                time.sleep(3)
                 ptch_des_tag = self.wait.until(ec.presence_of_element_located(
                     (By.XPATH, '//*[@id="ensp"]/div[2]/div[10]/div')))
                 ptch_description = ptch_des_tag.text.strip()
@@ -468,3 +475,4 @@ class Univers:
 
 yaou = Univers()
 yaou.get_yaounde1()
+yaou.close()
